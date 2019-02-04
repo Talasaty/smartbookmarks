@@ -5,6 +5,9 @@ export const HeaderContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
 
+    justify-content: center;
+    align-items: center;
+
     margin: 0 auto;
 
     height: 60px;
