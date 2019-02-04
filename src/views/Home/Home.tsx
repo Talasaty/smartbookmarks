@@ -8,14 +8,14 @@ import { Picture } from '$components/Picture';
 import { Description } from '$components/Description';
 import { Category } from '$components/Category';
 import { Input } from '$components/Input';
-import search from '$icons/search.png'
+import search from '$icons/search.svg'
 
 
 
 export class Home extends React.Component {
     render(){
     const exampleText = 'Lorem ipsum dolor sit amet consectetur adipiscing elit platea adipiscing elit platea'
-    const NameCategory = 'aaaaaaaaaaaasasasasasasasasasasasasasasasasasasasasasasasas'
+    const NameCategory = 'Cosas de casa'
     const SearcherProps = {
         iconRight: search,
         backgroundColor: '#57aff5',

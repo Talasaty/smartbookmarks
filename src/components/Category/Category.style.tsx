@@ -15,7 +15,13 @@ export const CategoryContainer = styled.div`
 
     margin: 10px;
 
-    background-color: pink;
+    background-color: transparent;
+
+    opacity: 0.5;
+
+    :hover{
+        opacity: 1.0;
+    }
 
     @media only screen and (max-width: 769px) {
         
@@ -28,7 +34,7 @@ export const CategoryContainer = styled.div`
 
 `
 
-export const ArrowCategory = styled.div`
+export const ArrowCategory = styled.img`
     float: right;
     right: 10px;
 
@@ -38,7 +44,12 @@ export const ArrowCategory = styled.div`
     width: 20%;
     max-width: 20px;
 
-    background-color: red;
+    transform: scale(0.7);
+
+    background-color: transparent;
+
+    cursor: pointer;
+
 `
 
 export const NameCategory = styled.div`
@@ -46,12 +57,13 @@ export const NameCategory = styled.div`
 
     width: 100%;
 
-    background-color: blue;
+    background-color: transparent;
+    font-size: 1.2em;
 
     text-align: center;
 `
 
-export const IconCategory = styled.div`
+export const OpenCategory = styled.img`
     float: left;
     left: 10px;
 
@@ -61,5 +73,9 @@ export const IconCategory = styled.div`
     width: 20%;
     max-width: 20px;
 
-    background-color: red;
+    transform: scale(1.2);
+
+    background-color: transparent;
+
+    cursor: pointer;
 `

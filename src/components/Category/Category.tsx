@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { CategoryContainer, ArrowCategory, NameCategory, IconCategory } from './Category.style';
-
+import { CategoryContainer, ArrowCategory, NameCategory, OpenCategory } from './Category.style';
+import arrowRigth from '$icons/arrowRigth.svg'
+import launch from '$icons/launch.svg'
 
 interface Props {
     Name: string
@@ -12,11 +13,11 @@ export class Category extends React.Component<Props> {
         const { Name } = this.props
         return(
             <CategoryContainer>
-                <IconCategory/>
+                <OpenCategory src={ launch }  onClick={()=> console.log('pulsado')}/>
                 <NameCategory>
                     { Name.substr(0,30) }
                 </NameCategory>
-                <ArrowCategory/>
+                <ArrowCategory src={ arrowRigth }/>
             </CategoryContainer>
         )
     }
