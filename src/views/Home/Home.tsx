@@ -14,7 +14,7 @@ import search from '$icons/search.svg'
 
 export class Home extends React.Component {
     render(){
-    const exampleText = 'Lorem ipsum dolor sit amet consectetur adipiscing elit platea adipiscing elit platea'
+    const exampleText = 'Lorem ipsum dolor sit amet consectetur adipiscing elit asdsfds'
     const NameCategory = 'Cosas de casa'
     const SearcherProps = {
         iconRight: search,

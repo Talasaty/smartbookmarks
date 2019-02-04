@@ -12,7 +12,7 @@ export class Description extends React.Component<Props> {
         const { DescriptionText } = this.props;
         return(
             <DescriptionContainer>
-                { DescriptionText.substr(0,70) }
+                { DescriptionText.substr(0,60) }
             </DescriptionContainer>
         )
     }

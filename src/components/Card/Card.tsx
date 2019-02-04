@@ -1,13 +1,15 @@
 import * as React from 'react'
-import { CardContainer, EditButton } from './Card.style';
-
+import { CardContainer, EditButton, EditImg } from './Card.style';
+import edit from '$icons/edit.svg'
 
 
 export class Card extends React.Component {
     render(){
         return(
             <CardContainer>
-                <EditButton/>
+                <EditButton>
+                    <EditImg src={edit}/>
+                </EditButton>
                 {this.props.children}
             </CardContainer>
         )

@@ -17,7 +17,7 @@ export const CategoryContainer = styled.div`
 
     background-color: transparent;
 
-    opacity: 0.5;
+    opacity: 0.6;
 
     :hover{
         opacity: 1.0;
@@ -61,6 +61,8 @@ export const NameCategory = styled.div`
     font-size: 1.2em;
 
     text-align: center;
+
+    cursor: pointer;
 `
 
 export const OpenCategory = styled.img`
