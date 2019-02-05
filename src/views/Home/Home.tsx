@@ -9,7 +9,7 @@ import { Description } from '$components/Description';
 import { Category } from '$components/Category';
 import { Input } from '$components/Input';
 import search from '$icons/search.svg'
-
+import test01 from '$imgs/test01.jpg';
 
 
 export class Home extends React.Component {
@@ -32,7 +32,7 @@ export class Home extends React.Component {
             </Aside>
             <Section>
                 <Card>
-                    <Picture/>
+                    <Picture img={test01}/>
                     <Description DescriptionText={exampleText}/>
                 </Card>
             </Section>
