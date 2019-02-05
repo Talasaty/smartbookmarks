@@ -1,11 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.css';
-import { Home } from '$views/Home';
+import Root from '$views/Root';
+
 
 
 ReactDOM.render(
-  <Home />,
+  <Root />,
   document.getElementById('root') as HTMLElement
 );
 
