@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface Props {
+    arrowDown: boolean;
+}
+
 export const CategoryContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -20,7 +24,7 @@ export const CategoryContainer = styled.div`
     opacity: 0.6;
 
     :hover{
-        opacity: 1.0;
+        opacity: 0.8; 
     }
 
     @media only screen and (max-width: 769px) {
@@ -34,7 +38,7 @@ export const CategoryContainer = styled.div`
 
 `
 
-export const ArrowCategory = styled.img`
+export const ArrowCategory = styled.img.attrs({})<Props>`
     float: right;
     right: 10px;
 
@@ -47,6 +51,8 @@ export const ArrowCategory = styled.img`
     transform: scale(0.7);
 
     background-color: transparent;
+
+    transform: ${p => p.arrowDown ? 'rotate(90deg)' : 'rotate(0deg)'};
 
     cursor: pointer;
 
@@ -80,4 +86,5 @@ export const OpenCategory = styled.img`
     background-color: transparent;
 
     cursor: pointer;
+
 `

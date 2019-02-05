@@ -15,7 +15,7 @@ import test01 from '$imgs/test01.jpg';
 export class Home extends React.Component {
     render(){
     const exampleText = 'Lorem ipsum dolor sit amet consectetur adipiscing elit asdsfds'
-    const NameCategory = 'Cosas de casa'
+    const NameCategory = 'Lorem ipsum dolor sit '
     const SearcherProps = {
         iconRight: search,
         backgroundColor: '#57aff5',
