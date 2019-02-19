@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { HeaderContainer } from './Header.style'
+import { HeaderContainer } from './HeaderHome.style'
 
 
-export class Header extends React.Component {
+export class HeaderHome extends React.Component {
     render(){
         return(
             <HeaderContainer>

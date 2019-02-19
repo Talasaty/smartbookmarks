@@ -1,0 +1,2 @@
+export { MainHome } from "./MainHome";
+

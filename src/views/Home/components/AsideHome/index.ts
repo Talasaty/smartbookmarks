@@ -1,0 +1,1 @@
+export { AsideHome } from './AsideHome'

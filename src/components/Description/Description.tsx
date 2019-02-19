@@ -6,14 +6,10 @@ interface Props {
     DescriptionText: string;
 }
 
-export class Description extends React.Component<Props> {
-    render(
-    ){
-        const { DescriptionText } = this.props;
-        return(
-            <DescriptionContainer>
-                { DescriptionText.substr(0,60) }
-            </DescriptionContainer>
-        )
-    }
-}
+export const Description: React.SFC<Props> = ({ DescriptionText }) => (
+    <DescriptionContainer>
+        { DescriptionText.substr(0,60) }
+    </DescriptionContainer>
+)
+ 
+

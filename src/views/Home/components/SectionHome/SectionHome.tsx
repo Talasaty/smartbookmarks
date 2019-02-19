@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { SectionWrapper } from './Section.style';
+import { SectionWrapper } from './SectionHome.style';
 
 
 
-export class Section extends React.Component {
+export class SectionHome extends React.Component {
     render(){
         return(
             <SectionWrapper>

@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { AsideWrapper } from './Aside.style';
+import { AsideWrapper } from './AsideHome.style';
 
 
-export class Aside extends React.Component {
+export class AsideHome extends React.Component {
     render(){
         return(
             <AsideWrapper>

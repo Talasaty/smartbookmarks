@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { MainWrapper } from './Main.style';
+import { MainWrapper } from './MainHome.style';
 
 
 
-export class Main extends React.Component {
+export class MainHome extends React.Component {
     render(){
         return(
             <MainWrapper>

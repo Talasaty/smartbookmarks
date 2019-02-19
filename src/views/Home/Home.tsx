@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { Header } from '$components/Header/Header';
-import { Main } from '$components/Main/Main';
-import { Section } from '$components/Section/Section';
-import { Aside } from '$components/Aside/Aside';
+
+import { MainHome, SectionHome, AsideHome, HeaderHome } from './components';
 import { Card } from '$components/Card/Card';
 import { Picture } from '$components/Picture';
 import { Description } from '$components/Description';
@@ -23,20 +21,20 @@ export class Home extends React.Component {
     }
     return(
         <>
-        <Header>
+        <HeaderHome>
             <Input properties={SearcherProps} />
-        </Header>
-        <Main>
-            <Aside>
+        </HeaderHome>
+        <MainHome>
+            <AsideHome>
                 <Category Name={NameCategory}/>
-            </Aside>
-            <Section>
+            </AsideHome>
+            <SectionHome>
                 <Card>
                     <Picture img={test01}/>
                     <Description DescriptionText={exampleText}/>
                 </Card>
-            </Section>
-        </Main>
+            </SectionHome>
+        </MainHome>
         </>
     )}
 }

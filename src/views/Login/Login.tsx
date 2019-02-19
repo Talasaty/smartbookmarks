@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Main } from '$components/Main/Main';
+
 import { Button } from '$components/Button';
 import { HeaderLogin } from './components';
 import { KeypadLogin } from './components/KeypadLogin';
@@ -7,19 +7,25 @@ import { KeypadLogin } from './components/KeypadLogin';
 
 
 
+
 export class Login extends React.Component {
     render(){
+        const buttonProperties = {
+            border: false,
+            colorBorder: '',
+            backgroundColor: 'blue'
+        }
     return(
         <>
         <HeaderLogin>
             <KeypadLogin>
-                <Button/>
-                <Button/>
+                <Button buttonProperties={buttonProperties}/>
+                <Button buttonProperties={buttonProperties}/>
             </KeypadLogin>
         </HeaderLogin>
-        <Main>
-            Infografias de inicio
-        </Main>
+        <div>
+            asdfasdfsdf
+        </div>
         </>
     )}
 }
