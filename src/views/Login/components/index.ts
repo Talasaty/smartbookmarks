@@ -1,1 +1,3 @@
-export { HeaderLogin } from './HeaderLogin';
+export { SignIn } from './SignIn/';
+export { SignUp } from './SignUp'
+

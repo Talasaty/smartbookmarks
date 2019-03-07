@@ -1,31 +1,19 @@
 import * as React from 'react';
-
-import { Button } from '$components/Button';
-import { HeaderLogin } from './components';
-import { KeypadLogin } from './components/KeypadLogin';
-
-
-
+import { SignIn, SignUp } from './components/';
+import { LoginContainer } from './Login.style';
 
 
 export class Login extends React.Component {
     render(){
-        const buttonProperties = {
+        /* const buttonProperties = {
             border: false,
             colorBorder: '',
             backgroundColor: 'blue'
-        }
+        } */
     return(
-        <>
-        <HeaderLogin>
-            <KeypadLogin>
-                <Button buttonProperties={buttonProperties}/>
-                <Button buttonProperties={buttonProperties}/>
-            </KeypadLogin>
-        </HeaderLogin>
-        <div>
-            asdfasdfsdf
-        </div>
-        </>
+        <LoginContainer>
+                <SignIn></SignIn>
+                <SignUp></SignUp>
+        </LoginContainer>
     )}
 }

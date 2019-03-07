@@ -21,5 +21,11 @@ export const ButtonStyle = styled.button.attrs({})<Props>`
 
     background-color: ${p => p.properties.backgroundColor};
 
+    outline: 0;
+
+    :hover{
+        cursor: pointer;
+    }
+
 
 `
