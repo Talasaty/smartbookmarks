@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-export const InputContainer = styled.div.attrs({})`
+interface Props {
+    backgroundColor?: string
+    borderColor?: string
+    color?: string
+}
+
+
+export const InputContainer = styled.div.attrs({})<Props>`
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -11,9 +18,10 @@ export const InputContainer = styled.div.attrs({})`
     max-width: 450px;
 
     border-radius: 10px;
-    border: 1px solid ${p => p.theme.colors.blue2};
+    border: 1px solid ${p => p.borderColor === 'white' ? p.theme.colors.white : p.borderColor === 'blue' ? p.theme.colors.blue2 : p.theme.colors.ligthGray};
+    
 
-    background-color: ${p => p.theme.colors.blue2};
+    background-color: ${p => p.backgroundColor === 'white' ? p.theme.colors.white : p.backgroundColor === 'blue' ? p.theme.colors.blue2 : p.theme.colors.lightGray};
     
 
     @media only screen and (max-width: 769px) {
@@ -26,19 +34,19 @@ export const InputContainer = styled.div.attrs({})`
     }
 
 `
-export const InputStyled = styled.input.attrs({})`
+export const InputStyled = styled.input.attrs({})<Props>`
     float: center;
 
     width: 100%;
 
-    background-color: ${p => p.theme.colors.blue2};
+    background-color: ${p => p.backgroundColor === 'white' ? p.theme.colors.white : p.backgroundColor === 'blue' ? p.theme.colors.blue2 : p.theme.colors.lightGray};
 
     text-align: right;
 
-    margin-right: 20px;
+    margin: 0 20px;
 
     font-size: 1.2em;
-    color: ${p => p.theme.colors.ligthGray};
+    color: ${p => p.color === 'text' ? p.theme.colors.text : p.color === 'white' ? p.theme.colors.white : p.theme.colors.ligthGray};
 
     border: none;
 
@@ -46,7 +54,7 @@ export const InputStyled = styled.input.attrs({})`
 
 `
 
-export const RightIcon = styled.img.attrs({})`
+export const RightIcon = styled.img.attrs({})<Props>`
     float: right;
     left: 10px;
 
@@ -56,10 +64,10 @@ export const RightIcon = styled.img.attrs({})`
     width: 20%;
     max-width: 20px;
 
-    background-color: ${p => p.theme.colors.lightGray};
+    background-color: ${p => p.backgroundColor === 'white' ? p.theme.colors.white : p.backgroundColor === 'blue' ? p.theme.colors.blue2 : p.theme.colors.lightGray};
 `
 
-export const LeftIcon = styled.img.attrs({})`
+export const LeftIcon = styled.img.attrs({})<Props>`
     float: left;
     right: 10px;
 
@@ -69,5 +77,5 @@ export const LeftIcon = styled.img.attrs({})`
     width: 20%;
     max-width: 20px;
 
-    background-color: ${p => p.theme.colors.lightGray};
+    background-color: ${p => p.backgroundColor === 'white' ? p.theme.colors.white : p.backgroundColor === 'blue' ? p.theme.colors.blue2 : p.theme.colors.lightGray};
 `
