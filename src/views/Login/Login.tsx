@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { SignIn, SignUp } from './components/';
-import { LoginContainer } from './Login.style';
+import { SignIn } from './components/';
+import { LoginContainer, HeaderLogin } from './Login.style';
+
 
 
 export class Login extends React.Component {
@@ -12,8 +13,13 @@ export class Login extends React.Component {
         } */
     return(
         <LoginContainer>
-                <SignIn></SignIn>
-                <SignUp></SignUp>
+                <SignIn>
+                <HeaderLogin/>
+                </SignIn>
         </LoginContainer>
     )}
 }
+
+
+
+

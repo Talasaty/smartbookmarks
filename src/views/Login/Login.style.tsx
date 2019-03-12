@@ -11,3 +11,13 @@ export const LoginContainer = styled.div`
     height: 100vh;
 
 `
+
+export const HeaderLogin = styled.div`
+    width: 100%;
+    height: 100px;
+
+    background-color: red;
+    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+`

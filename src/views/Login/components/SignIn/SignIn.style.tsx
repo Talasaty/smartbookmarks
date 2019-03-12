@@ -10,6 +10,13 @@ export const SignInContainer = styled.div`
 
     margin: 50px;
 
-    background-color: blue;
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 `
+
+
+
