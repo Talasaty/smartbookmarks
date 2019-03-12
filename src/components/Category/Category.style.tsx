@@ -19,8 +19,6 @@ export const CategoryContainer = styled.div`
 
     margin: 10px;
 
-    background-color: transparent;
-
     opacity: 0.6;
 
     :hover{
@@ -50,8 +48,6 @@ export const ArrowCategory = styled.img.attrs({})<Props>`
 
     transform: scale(0.7);
 
-    background-color: transparent;
-
     transform: ${p => p.arrowDown ? 'rotate(90deg)' : 'rotate(0deg)'};
 
     cursor: pointer;
@@ -63,7 +59,6 @@ export const NameCategory = styled.div`
 
     width: 100%;
 
-    background-color: transparent;
     font-size: 1.2em;
 
     text-align: center;
@@ -82,8 +77,6 @@ export const OpenCategory = styled.img`
     max-width: 20px;
 
     transform: scale(1.2);
-
-    background-color: transparent;
 
     cursor: pointer;
 

@@ -13,6 +13,6 @@ export const HeaderContainer = styled.div`
     height: 60px;
     width: 100%;
 
-    background-color: #3096F3;
-    box-shadow: 0 4px 2px -2px gray;
+    background-color: ${p => p.theme.colors.blue};
+    box-shadow: 0 4px 2px -2px ${p => p.theme.colors.darkGray};
 `

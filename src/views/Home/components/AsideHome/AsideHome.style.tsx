@@ -9,8 +9,6 @@ export const AsideWrapper = styled.div`
     margin-top: 60px;
     padding: 35px 20px;
 
-    background-color: transparent;
-
     overflow-x: hidden;
     overflow-y: auto;
 

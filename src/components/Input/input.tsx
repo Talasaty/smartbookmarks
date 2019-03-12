@@ -2,21 +2,16 @@ import * as React from 'react'
 import { InputContainer, LeftIcon, InputStyled, RightIcon } from './input.style';
 
 interface Props {
-    properties: {
-        iconLeft?: string
-        iconRight?: string
-        backgroundColor?: string
-        textColor?: string
-    }
-    
+    iconLeft?: string
+    iconRight?: string
 }
 
 
-export const Input: React.SFC<Props> = ({ properties }) => (
-    <InputContainer backgroundColor={properties.backgroundColor}>
-        { properties.iconLeft && <LeftIcon backgroundColor={properties.backgroundColor} src={properties.iconLeft}/>}
-        <InputStyled backgroundColor={properties.backgroundColor} textColor={properties.textColor}/>
-        { properties.iconRight && <RightIcon backgroundColor={properties.backgroundColor} src={properties.iconRight}/>}
+export const Input: React.SFC<Props> = ({iconLeft, iconRight}) => (
+    <InputContainer>
+        { iconLeft && <LeftIcon src={iconLeft}/>}
+        <InputStyled/>
+        { iconRight && <RightIcon src={iconRight}/>}
     </InputContainer>
 )
     

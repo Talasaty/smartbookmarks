@@ -11,6 +11,6 @@ export const MainWrapper = styled.div`
 
     min-height: 100vh;
 
-    background-color: #F0F0F0;
+    background-color: ${p => p.theme.colors.ligthGray};
 
 `

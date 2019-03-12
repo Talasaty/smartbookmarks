@@ -10,8 +10,6 @@ export const DescriptionContainer = styled.div`
 
     height: 30%;
 
-    background-color: transparent;
-
     margin: 10px;
 
 `

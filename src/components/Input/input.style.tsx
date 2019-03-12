@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
-interface Props {
-    backgroundColor?: string
-    textColor?: string
-    iconLeft?: string
-    iconRight?: string
-}
-
-export const InputContainer = styled.div.attrs({})<Props>`
+export const InputContainer = styled.div.attrs({})`
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -18,9 +11,9 @@ export const InputContainer = styled.div.attrs({})<Props>`
     max-width: 450px;
 
     border-radius: 10px;
-    border: 1px solid ${p => p.backgroundColor};
+    border: 1px solid ${p => p.theme.colors.blue2};
 
-    background-color: ${p => p.backgroundColor};
+    background-color: ${p => p.theme.colors.blue2};
     
 
     @media only screen and (max-width: 769px) {
@@ -33,33 +26,19 @@ export const InputContainer = styled.div.attrs({})<Props>`
     }
 
 `
-
-export const LeftIcon = styled.img.attrs({})<Props>`
-    float: right;
-    right: 10px;
-
-    margin: 0px 15px;
-
-    height: 20px;
-    width: 20%;
-    max-width: 20px;
-
-    background-color: ${p => p.backgroundColor};
-`
-
-export const InputStyled = styled.input.attrs({})<Props>`
+export const InputStyled = styled.input.attrs({})`
     float: center;
 
     width: 100%;
 
-    background-color: ${p => p.backgroundColor};
+    background-color: ${p => p.theme.colors.blue2};
 
     text-align: right;
 
     margin-right: 20px;
 
     font-size: 1.2em;
-    color: ${p => p.textColor};
+    color: ${p => p.theme.colors.ligthGray};
 
     border: none;
 
@@ -67,8 +46,8 @@ export const InputStyled = styled.input.attrs({})<Props>`
 
 `
 
-export const RightIcon = styled.img.attrs({})<Props>`
-    float: left;
+export const RightIcon = styled.img.attrs({})`
+    float: right;
     left: 10px;
 
     margin: 0px 15px;
@@ -77,5 +56,18 @@ export const RightIcon = styled.img.attrs({})<Props>`
     width: 20%;
     max-width: 20px;
 
-    background-color: ${p => p.backgroundColor};
+    background-color: ${p => p.theme.colors.lightGray};
+`
+
+export const LeftIcon = styled.img.attrs({})`
+    float: left;
+    right: 10px;
+
+    margin: 0px 15px;
+
+    height: 20px;
+    width: 20%;
+    max-width: 20px;
+
+    background-color: ${p => p.theme.colors.lightGray};
 `

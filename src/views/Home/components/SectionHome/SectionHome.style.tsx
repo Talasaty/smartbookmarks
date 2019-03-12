@@ -11,7 +11,7 @@ export const SectionWrapper = styled.div`
     margin-left: 20px;
     margin-bottom: 20px;
 
-    background-color: white;
+    background-color: ${p => p.theme.colors.white};
 
     overflow-x: hidden;
     overflow-y: auto;

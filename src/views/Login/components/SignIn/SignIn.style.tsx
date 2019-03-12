@@ -10,7 +10,7 @@ export const SignInContainer = styled.div`
 
     margin: 50px;
 
-    background-color: white;
+    background-color: ${p => p.theme.colors.white};
 
     border-radius: 15px;
 

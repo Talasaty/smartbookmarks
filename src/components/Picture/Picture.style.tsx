@@ -7,6 +7,4 @@ export const PictureContainer = styled.img`
 
     margin: 0px 0px;
 
-    background-color: transparent;
-
 `
