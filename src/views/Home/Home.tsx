@@ -17,7 +17,7 @@ export class Home extends React.Component {
     return(
         <>
         <HeaderHome>
-            <Input iconRight={search} />
+            <Input iconRight={search} backgroundColor="blue" borderColor="blue" color="gray"/>
         </HeaderHome>
         <MainHome>
             <AsideHome>
