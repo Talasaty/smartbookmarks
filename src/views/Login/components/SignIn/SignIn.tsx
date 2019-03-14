@@ -1,7 +1,14 @@
-import * as React from "react";
-import { SignInContainer, SignInHeader, SignInInputContainer, Text } from "./SignIn.style";
-import { Button } from "$components/Button";
-import { Input } from "$components/Input";
+import * as React from "react"
+import { SignInContainer, 
+        SignInHeader, 
+        SignInInputContainer, 
+        LabelContainer, 
+        ButtonLoginContainer, 
+        } from "./SignIn.style"
+
+import { Input } from "$components/Input"
+import { Text } from "$components/Text"
+import { Button } from "$components/Button"
 
 
 export class SignIn extends React.Component {
@@ -10,14 +17,22 @@ export class SignIn extends React.Component {
             <SignInContainer>
                 <SignInHeader/>
                 <SignInInputContainer>
-                    <Text>Usuario</Text>
+                    <LabelContainer>
+                        <Text weight="light" type="span">Usuario</Text>
+                    </LabelContainer>
                     <Input backgroundColor="white" borderColor="gray" color="text"/>
                 </SignInInputContainer>
                 <SignInInputContainer>
-                    <Text>Contraseña</Text>
+                    <LabelContainer>
+                        <Text weight="light" type="span">Contraseña</Text>
+                    </LabelContainer>
                     <Input backgroundColor="white" borderColor="gray" color="text"/>
                 </SignInInputContainer>
-                <Button/>
+                <ButtonLoginContainer>
+                    <Button>
+                        <Text weight="light" type="span" color="ligthGray">Login</Text>
+                    </Button>
+                </ButtonLoginContainer>
             </SignInContainer>
         )
     }

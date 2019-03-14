@@ -43,7 +43,7 @@ export const InputStyled = styled.input.attrs({})<Props>`
 
     text-align: right;
 
-    margin: 0 20px;
+    margin: 0 5px;
 
     font-size: 1.2em;
     color: ${p => p.color === 'text' ? p.theme.colors.text : p.color === 'white' ? p.theme.colors.white : p.theme.colors.ligthGray};

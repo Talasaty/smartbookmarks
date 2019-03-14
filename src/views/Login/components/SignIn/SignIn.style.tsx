@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-
+import styled from "styled-components"
 
 export const SignInContainer = styled.div`
 
@@ -32,16 +30,16 @@ export const SignInInputContainer = styled.div`
     margin: 30px 10px;
 `
 
-export const Text = styled.p`
+export const LabelContainer = styled.div`
     float: right;
-    
-    margin: 10px 5px;
+    margin-right: 10px;
 
-    text-transform: uppercase;
-
-    font-weight: 500;
-
-    font-size: 16px;
+    opacity: 0.6;
 `
+
+export const ButtonLoginContainer = styled.div`
+    float: right;
+`
+
 
 
