@@ -1,5 +1,5 @@
 
-interface Colors {
+export interface Colors {
     ligthGray: string,
     darkGray: string,
     white: string,

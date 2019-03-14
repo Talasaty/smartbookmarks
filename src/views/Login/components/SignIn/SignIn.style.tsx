@@ -1,5 +1,4 @@
-import styled from "styled-components";
-
+import styled from "styled-components"
 
 export const SignInContainer = styled.div`
 
@@ -16,6 +15,30 @@ export const SignInContainer = styled.div`
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+`
+export const SignInHeader = styled.div`
+    width: 100%;
+    height: 100px;
+
+    background-color: ${p => p.theme.colors.blue};
+    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+`
+
+export const SignInInputContainer = styled.div`
+    margin: 30px 10px;
+`
+
+export const LabelContainer = styled.div`
+    float: right;
+    margin-right: 10px;
+
+    opacity: 0.6;
+`
+
+export const ButtonLoginContainer = styled.div`
+    float: right;
 `
 
 

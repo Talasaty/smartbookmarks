@@ -9,7 +9,9 @@ export const ButtonStyle = styled.button.attrs({})`
     margin: 10px;
     padding: 5px;
 
-    background-color: ${p => p.theme.colors.blue2};
+    background-color: ${p => p.theme.colors.blue};
+
+    border-radius: 10px;
 
     outline: 0;
 
