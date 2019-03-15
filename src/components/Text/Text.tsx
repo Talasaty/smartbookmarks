@@ -24,7 +24,7 @@ interface Props {
     size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
     weight?: 'light' | 'semiBold' | 'medium' | 'regular' | 'bold'
     type?: 'p' | 'span'
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 
