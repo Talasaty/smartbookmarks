@@ -3,7 +3,8 @@ import { LogInContainer,
         LogInHeader, 
         LogInInputContainer, 
         LabelContainer, 
-        ButtonLoginContainer, 
+        ButtonLoginContainer,
+        ButtonSignInContainer, 
         } from "./LogInForm.style"
 
 import { Input } from "$components/Input"
@@ -18,13 +19,13 @@ export class LogInForm extends React.Component {
                 <LogInHeader/>
                 <LogInInputContainer>
                     <LabelContainer>
-                        <Text weight="light" type="span">Usuario</Text>
+                        <Text weight="medium" type="span">Usuario</Text>
                     </LabelContainer>
                     <Input backgroundColor="white" borderColor="gray" color="text"/>
                 </LogInInputContainer>
                 <LogInInputContainer>
                     <LabelContainer>
-                        <Text weight="light" type="span">Contraseña</Text>
+                        <Text weight="medium" type="span">Contraseña</Text>
                     </LabelContainer>
                     <Input backgroundColor="white" borderColor="gray" color="text"/>
                     <LabelContainer>
@@ -32,10 +33,15 @@ export class LogInForm extends React.Component {
                     </LabelContainer>
                 </LogInInputContainer>
                 <ButtonLoginContainer>
-                    <Button>
-                        <Text weight="light" type="span" color="ligthGray">Login</Text>
+                    <Button  backgroundColor="blue2">
+                        <Text weight="small" type="span" color="ligthGray">Login</Text>
                     </Button>
                 </ButtonLoginContainer>
+                <ButtonSignInContainer>
+                    <Button  type="big">
+                        <Text type="span" color="blue" size="h6">Registrate aquí</Text>
+                    </Button>
+                </ButtonSignInContainer>
             </LogInContainer>
         )
     }

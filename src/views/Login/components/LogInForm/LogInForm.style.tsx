@@ -46,10 +46,20 @@ export const LabelContainer = styled.div`
 `
 
 export const ButtonLoginContainer = styled.div`
-    float: right;
+    display: flex;
+
+justify-content: flex-end;
 
     margin-top: 10px;
 `
 
+export const ButtonSignInContainer = styled.div`
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    margin-left: -100px;
 
+    left: 50%;
+    
+`
 
