@@ -1,2 +1,2 @@
-export { SignIn } from './SignIn/'
+export { LogInForm } from './LogInForm'
 

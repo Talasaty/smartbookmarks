@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
-export const SignInContainer = styled.div`
+export const LogInContainer = styled.div`
+    position: relative;
 
     min-width: 360px;
     max-width: 400px;
@@ -15,8 +16,15 @@ export const SignInContainer = styled.div`
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+    @media only screen and (max-width: 769px) {
+        min-width: 0px;
+        margin: 0px;
+
+    
+    }
+
 `
-export const SignInHeader = styled.div`
+export const LogInHeader = styled.div`
     width: 100%;
     height: 100px;
 
@@ -26,7 +34,7 @@ export const SignInHeader = styled.div`
     border-top-right-radius: 15px;
 `
 
-export const SignInInputContainer = styled.div`
+export const LogInInputContainer = styled.div`
     margin: 30px 10px;
 `
 
@@ -38,8 +46,20 @@ export const LabelContainer = styled.div`
 `
 
 export const ButtonLoginContainer = styled.div`
-    float: right;
+    display: flex;
+
+justify-content: flex-end;
+
+    margin-top: 10px;
 `
 
+export const ButtonSignInContainer = styled.div`
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    margin-left: -100px;
 
+    left: 50%;
+    
+`
 

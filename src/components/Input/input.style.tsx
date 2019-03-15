@@ -26,8 +26,6 @@ export const InputContainer = styled.div.attrs({})<Props>`
 
     @media only screen and (max-width: 769px) {
         
-        width: 100vw;
-        max-width: 100vw;
         margin-left: 0px;
         margin-right: 0px;
     

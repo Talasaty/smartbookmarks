@@ -9,6 +9,8 @@ export interface FontSize {
 
 export interface FontWeight {
     light: string
+    tiny: string
+    small: string
     semiBold: string
     medium: string
     regular: string
@@ -25,7 +27,9 @@ export const fontSize: FontSize = {
 }
 
 export const fontWeight: FontWeight = {
-    light: '300',
+    tiny: '100',
+    small: '200',
+    light:'300',
     semiBold: '600',
     medium: '500',
     regular: '400',
