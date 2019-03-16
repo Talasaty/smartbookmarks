@@ -42,6 +42,10 @@ export const LabelContainer = styled.div`
   opacity: 0.6;
 `
 
+export const ForgotYourPassword = styled(LabelContainer)`
+  cursor: pointer;
+`
+
 export const ButtonLoginContainer = styled.div`
   display: flex;
 
@@ -52,7 +56,6 @@ export const ButtonLoginContainer = styled.div`
 
 export const ButtonSignInContainer = styled.div`
   position: absolute;
-  width: 100%;
   bottom: 0px;
   margin-left: -100px;
 

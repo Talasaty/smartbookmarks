@@ -6,6 +6,7 @@ import {
   LabelContainer,
   ButtonLoginContainer,
   ButtonSignInContainer,
+  ForgotYourPassword,
 } from './LogInForm.style'
 
 import { Input } from '$components/Input'
@@ -32,15 +33,15 @@ export class LogInForm extends React.Component {
             </Text>
           </LabelContainer>
           <Input backgroundColor="white" borderColor="gray" color="text" />
-          <LabelContainer>
+          <ForgotYourPassword>
             <Text type="span" color="blue" size="h6">
               ¿Has olvidado la contraseña?
             </Text>
-          </LabelContainer>
+          </ForgotYourPassword>
         </LogInInputContainer>
         <ButtonLoginContainer>
           <Button backgroundColor="blue2">
-            <Text weight="small" type="span" color="ligthGray">
+            <Text weight="small" type="span" color="white">
               Login
             </Text>
           </Button>
