@@ -1,15 +1,13 @@
-import styled from "styled-components";
-
+import styled from 'styled-components'
 
 export const DescriptionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    position: relative;
+  position: relative;
 
-    height: 30%;
+  height: 30%;
 
-    margin: 10px;
-
+  margin: 10px;
 `
