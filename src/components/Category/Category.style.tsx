@@ -12,16 +12,20 @@ export const CategoryContainer = styled.div`
 
   position: relative;
 
-  height: 50px;
+  height: ${p => p.theme.sizes.huge};
   width: 400px;
   max-width: 400px;
 
-  margin: 10px;
+  margin: ${p => p.theme.sizes.tiny};;
 
   opacity: 0.6;
 
   :hover {
     opacity: 0.8;
+  }
+
+  svg {
+    vertical-align: middle;
   }
 
   @media only screen and (max-width: 769px) {
@@ -33,43 +37,32 @@ export const CategoryContainer = styled.div`
 `
 
 export const ArrowCategory = styled.img.attrs({})<Props>`
-  float: right;
-  right: 10px;
-
-  margin: 0px 10px;
-
-  height: 20px;
-  width: 20%;
-  max-width: 20px;
-
-  transform: scale(0.7);
+  max-width: ${p => p.theme.sizes.tiny};;
 
   transform: ${p => (p.arrowDown ? 'rotate(90deg)' : 'rotate(0deg)')};
 
   cursor: pointer;
+
+  
 `
 
 export const NameCategory = styled.div`
-  float: center;
-
   width: 100%;
 
-  font-size: 1.2em;
-
-  text-align: center;
-
+  margin-left: ${p => p.theme.sizes.tiny};
+  
   cursor: pointer;
 `
 
 export const OpenCategory = styled.img`
   float: left;
-  left: 10px;
+  left: ${p => p.theme.sizes.tiny};;
 
-  margin: 0px 10px;
+  margin: 0px ${p => p.theme.sizes.tiny};;
 
-  height: 20px;
+  height: ${p => p.theme.sizes.small};
   width: 20%;
-  max-width: 20px;
+  max-width: ${p => p.theme.sizes.small};
 
   transform: scale(1.2);
 

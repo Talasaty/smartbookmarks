@@ -22,7 +22,7 @@ const ButtonStyle = styled.button.attrs({})<Props>`
   max-height: 90%;
 
   margin: 10px;
-  padding: 5px;
+  padding: ${p => p.theme.sizes.xTiny};
 
   background-color: ${p =>
     p.backgroundColor ? colors[p.backgroundColor] : 'transparent'};

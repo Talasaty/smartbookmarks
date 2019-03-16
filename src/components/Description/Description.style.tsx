@@ -9,5 +9,5 @@ export const DescriptionContainer = styled.div`
 
   height: 30%;
 
-  margin: 10px;
+  margin: ${p => p.theme.sizes.tiny};
 `

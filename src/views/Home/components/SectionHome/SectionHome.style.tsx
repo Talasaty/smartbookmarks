@@ -4,11 +4,11 @@ export const SectionWrapper = styled.div`
   display: flex;
   flex-grow: 3;
 
-  padding: 15px 20px;
+  padding: 1${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.small};
   margin-top: 80px;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin-right: ${p => p.theme.sizes.small};
+  margin-left: ${p => p.theme.sizes.small};
+  margin-bottom: ${p => p.theme.sizes.small};
 
   background-color: ${p => p.theme.colors.white};
 
@@ -16,6 +16,8 @@ export const SectionWrapper = styled.div`
   overflow-y: auto;
 
   float: right;
+
+  border-radius: ${p => p.theme.sizes.tiny};
 
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 

@@ -12,11 +12,11 @@ export const InputContainer = styled.div.attrs({})<Props>`
   justify-content: right;
   align-items: center;
 
-  height: 40px;
+  height: ${p => p.theme.sizes.large};
   width: 100%;
   max-width: 450px;
 
-  border-radius: 10px;
+  border-radius: ${p => p.theme.sizes.tiny};
   border: 1px solid
     ${p =>
       p.borderColor === 'white'
@@ -51,7 +51,7 @@ export const InputStyled = styled.input.attrs({})<Props>`
 
   text-align: right;
 
-  margin: 0 5px;
+  margin: 0 ${p => p.theme.sizes.xTiny};
 
   font-size: 1.2em;
   color: ${p =>
@@ -68,13 +68,13 @@ export const InputStyled = styled.input.attrs({})<Props>`
 
 export const RightIcon = styled.img.attrs({})<Props>`
   float: right;
-  left: 10px;
+  left: ${p => p.theme.sizes.tiny};
 
-  margin: 0px 15px;
+  margin: 0px 1${p => p.theme.sizes.xTiny};
 
-  height: 20px;
+  height: ${p => p.theme.sizes.small};
   width: 20%;
-  max-width: 20px;
+  max-width: ${p => p.theme.sizes.small};
 
   background-color: ${p =>
     p.backgroundColor === 'white'
@@ -86,13 +86,13 @@ export const RightIcon = styled.img.attrs({})<Props>`
 
 export const LeftIcon = styled.img.attrs({})<Props>`
   float: left;
-  right: 10px;
+  right: ${p => p.theme.sizes.tiny};
 
-  margin: 0px 15px;
+  margin: 0px 1${p => p.theme.sizes.xTiny};
 
-  height: 20px;
+  height: ${p => p.theme.sizes.small};
   width: 20%;
-  max-width: 20px;
+  max-width: ${p => p.theme.sizes.small};
 
   background-color: ${p =>
     p.backgroundColor === 'white'

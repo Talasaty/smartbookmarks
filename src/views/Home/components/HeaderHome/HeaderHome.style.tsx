@@ -10,7 +10,7 @@ export const HeaderContainer = styled.div`
 
   margin: 0 auto;
 
-  height: 60px;
+  height: ${p => p.theme.sizes.huge};
   width: 100%;
 
   background-color: ${p => p.theme.colors.blue};

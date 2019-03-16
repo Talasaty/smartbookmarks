@@ -4,7 +4,7 @@ import { colors } from '$utils/theme/colors'
 import { fontSize, fontWeight } from '$utils/theme/font'
 
 const P = styled.p.attrs({})<Props>`
-  font-size: ${p => (p.size ? fontSize[p.size] : p.theme.fontSize.h4)};
+  font-size: ${p => (p.size ? fontSize[p.size] : p.theme.fontSize.h5)};
   color: ${p => (p.color ? colors[p.color] : p.theme.colors.text)};
   font-weight: ${p =>
     p.weight ? fontWeight[p.weight] : p.theme.fontWeight.light};
@@ -12,7 +12,10 @@ const P = styled.p.attrs({})<Props>`
     p.weight === 'semiBold' || p.weight === 'bold' || p.weight === 'medium'
       ? 'Roboco'
       : 'Open Sans'};
-  letter-spacing: 1px;
+  letter-spacing: ${p =>
+    p.weight === 'semiBold' || p.weight === 'bold' || p.weight === 'medium'
+      ? '1px'
+      : '0.${p => p.theme.sizes.xTiny}'};
 `
 
 const Span = styled.span.attrs({})<Props>`

@@ -21,7 +21,7 @@ export const fontSize: FontSize = {
   h6: '11px',
   h5: '14px',
   h4: '17px',
-  h3: '20px',
+  h3: '${p => p.theme.sizes.small}',
   h2: '23px',
   h1: '26px',
 }
