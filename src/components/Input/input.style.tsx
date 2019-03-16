@@ -70,7 +70,7 @@ export const RightIcon = styled.img.attrs({})<Props>`
   float: right;
   left: ${p => p.theme.sizes.tiny};
 
-  margin: 0px 1${p => p.theme.sizes.xTiny};
+  margin: 0px 1 ${p => p.theme.sizes.xTiny};
 
   height: ${p => p.theme.sizes.small};
   width: 20%;
@@ -88,7 +88,7 @@ export const LeftIcon = styled.img.attrs({})<Props>`
   float: left;
   right: ${p => p.theme.sizes.tiny};
 
-  margin: 0px 1${p => p.theme.sizes.xTiny};
+  margin: 0px 1 ${p => p.theme.sizes.xTiny};
 
   height: ${p => p.theme.sizes.small};
   width: 20%;

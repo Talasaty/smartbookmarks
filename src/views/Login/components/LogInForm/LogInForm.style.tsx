@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const LogInContainer = styled.div`
   position: relative;
 
-  min-width: 3${p => p.theme.sizes.huge};
+  min-width: 3 ${p => p.theme.sizes.huge};
   max-width: 400px;
 
   height: 500px;
@@ -12,9 +12,10 @@ export const LogInContainer = styled.div`
 
   background-color: ${p => p.theme.colors.white};
 
-  border-radius: 1${p => p.theme.sizes.xTiny};
+  border-radius: 1 ${p => p.theme.sizes.xTiny};
 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px ${p => p.theme.sizes.small} 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px ${p => p.theme.sizes.small} 0 rgba(0, 0, 0, 0.19);
 
   @media only screen and (max-width: 769px) {
     min-width: 0px;
@@ -27,8 +28,8 @@ export const LogInHeader = styled.div`
 
   background-color: ${p => p.theme.colors.blue};
 
-  border-top-left-radius: 1${p => p.theme.sizes.xTiny};
-  border-top-right-radius: 1${p => p.theme.sizes.xTiny};
+  border-top-left-radius: 1 ${p => p.theme.sizes.xTiny};
+  border-top-right-radius: 1 ${p => p.theme.sizes.xTiny};
 `
 
 export const LogInInputContainer = styled.div`

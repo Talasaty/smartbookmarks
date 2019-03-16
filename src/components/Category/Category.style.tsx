@@ -16,7 +16,7 @@ export const CategoryContainer = styled.div`
   width: 400px;
   max-width: 400px;
 
-  margin: ${p => p.theme.sizes.tiny};;
+  margin: ${p => p.theme.sizes.tiny};
 
   opacity: 0.6;
 
@@ -37,28 +37,26 @@ export const CategoryContainer = styled.div`
 `
 
 export const ArrowCategory = styled.img.attrs({})<Props>`
-  max-width: ${p => p.theme.sizes.tiny};;
+  max-width: ${p => p.theme.sizes.tiny};
 
   transform: ${p => (p.arrowDown ? 'rotate(90deg)' : 'rotate(0deg)')};
 
   cursor: pointer;
-
-  
 `
 
 export const NameCategory = styled.div`
   width: 100%;
 
   margin-left: ${p => p.theme.sizes.tiny};
-  
+
   cursor: pointer;
 `
 
 export const OpenCategory = styled.img`
   float: left;
-  left: ${p => p.theme.sizes.tiny};;
+  left: ${p => p.theme.sizes.tiny};
 
-  margin: 0px ${p => p.theme.sizes.tiny};;
+  margin: 0px ${p => p.theme.sizes.tiny};
 
   height: ${p => p.theme.sizes.small};
   width: 20%;

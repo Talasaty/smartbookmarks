@@ -4,7 +4,7 @@ export const SectionWrapper = styled.div`
   display: flex;
   flex-grow: 3;
 
-  padding: 1${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.small};
+  padding: 1 ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.small};
   margin-top: 80px;
   margin-right: ${p => p.theme.sizes.small};
   margin-left: ${p => p.theme.sizes.small};

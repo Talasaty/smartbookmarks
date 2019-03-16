@@ -7,14 +7,15 @@ export const CardContainer = styled.div`
   flex-direction: column;
 
   width: 180px;
-  height: 2${p => p.theme.sizes.small};
+  height: 2 ${p => p.theme.sizes.small};
 
   margin: 0px;
   padding: 0px;
 
   background-color: ${p => p.theme.colors.white};
-  
+
   border-radius: ${p => p.theme.sizes.tiny};
 
-  box-shadow: 0 10px ${p => p.theme.sizes.small} rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px ${p => p.theme.sizes.small} rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
 `

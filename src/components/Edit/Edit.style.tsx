@@ -5,8 +5,8 @@ export const EditButtonStyle = styled.button`
 
   opacity: 0;
 
-  height: 3${p => p.theme.sizes.xTiny};
-  width: 3${p => p.theme.sizes.xTiny};
+  height: 3 ${p => p.theme.sizes.xTiny};
+  width: 3 ${p => p.theme.sizes.xTiny};
 
   right: 0;
   top: 0;
@@ -25,7 +25,9 @@ export const EditButtonStyle = styled.button`
 
   background-color: #f0f0f0;
 
-  box-shadow: 0 ${p => p.theme.sizes.tiny} ${p => p.theme.sizes.small} rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 ${p => p.theme.sizes.tiny} ${p => p.theme.sizes.small}
+      rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
 
   outline: none;
   :hover {
