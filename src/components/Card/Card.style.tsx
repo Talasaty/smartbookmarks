@@ -1,19 +1,20 @@
-import styled from "styled-components";
-
+import styled from 'styled-components'
 
 export const CardContainer = styled.div`
-    position: relative;
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    width: 180px;
-    height: 220px;
+  width: 180px;
+  height: 2${p => p.theme.sizes.small};
 
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 
-    background-color: ${p => p.theme.colors.white};
+  background-color: ${p => p.theme.colors.white};
+  
+  border-radius: ${p => p.theme.sizes.tiny};
 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px ${p => p.theme.sizes.small} rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 `

@@ -1,39 +1,38 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const EditButtonStyle = styled.button`
-    position: absolute;
+  position: absolute;
 
-    opacity: 0;
+  opacity: 0;
 
-    height: 35px;
-    width: 35px;
+  height: 3${p => p.theme.sizes.xTiny};
+  width: 3${p => p.theme.sizes.xTiny};
 
-    right: 0;
-    top: 0;
+  right: 0;
+  top: 0;
 
-    z-index: 999;
+  z-index: 999;
 
-    color: blue;
+  color: blue;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    margin: 3px;
-    padding: 5px;
+  margin: 3px;
+  padding: ${p => p.theme.sizes.xTiny};
 
-    border: 1px solid #F0F0F0;
-    border-radius: 50%;
+  border: 1px solid #f0f0f0;
+  border-radius: 50%;
 
-    background-color: #F0F0F0;
+  background-color: #f0f0f0;
 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 ${p => p.theme.sizes.tiny} ${p => p.theme.sizes.small} rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-    outline: none;
-    :hover{
-        opacity: 0.8;
-        
-    }
+  outline: none;
+  :hover {
+    opacity: 0.8;
+  }
 `
 
 export const EditImg = styled.img`
-    background-color: transparent;
+  background-color: transparent;
 `

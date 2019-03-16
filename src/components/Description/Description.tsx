@@ -1,15 +1,10 @@
 import * as React from 'react'
-import { DescriptionContainer } from './Description.style';
-
+import { DescriptionContainer } from './Description.style'
 
 interface Props {
-    DescriptionText: string;
+  DescriptionText: string
 }
 
 export const Description: React.SFC<Props> = ({ DescriptionText }) => (
-    <DescriptionContainer>
-        { DescriptionText.substr(0,60) }
-    </DescriptionContainer>
+  <DescriptionContainer>{DescriptionText.substr(0, 60)}</DescriptionContainer>
 )
- 
-

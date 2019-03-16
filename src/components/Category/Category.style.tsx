@@ -1,83 +1,70 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 interface Props {
-    arrowDown: boolean;
+  arrowDown: boolean
 }
 
 export const CategoryContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
 
-    position: relative;
+  position: relative;
 
-    height: 50px;
-    width: 400px;
-    max-width: 400px;
+  height: ${p => p.theme.sizes.huge};
+  width: 400px;
+  max-width: 400px;
 
-    margin: 10px;
+  margin: ${p => p.theme.sizes.tiny};;
 
-    opacity: 0.6;
+  opacity: 0.6;
 
-    :hover{
-        opacity: 0.8; 
-    }
+  :hover {
+    opacity: 0.8;
+  }
 
-    @media only screen and (max-width: 769px) {
-        
-        width: 100vw;
-        max-width: 100vw;
-        margin-left: 0px;
-        margin-right: 0px;
-    
-    }
+  svg {
+    vertical-align: middle;
+  }
 
+  @media only screen and (max-width: 769px) {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 `
 
 export const ArrowCategory = styled.img.attrs({})<Props>`
-    float: right;
-    right: 10px;
+  max-width: ${p => p.theme.sizes.tiny};;
 
-    margin: 0px 10px;
+  transform: ${p => (p.arrowDown ? 'rotate(90deg)' : 'rotate(0deg)')};
 
-    height: 20px;
-    width: 20%;
-    max-width: 20px;
+  cursor: pointer;
 
-    transform: scale(0.7);
-
-    transform: ${p => p.arrowDown ? 'rotate(90deg)' : 'rotate(0deg)'};
-
-    cursor: pointer;
-
+  
 `
 
 export const NameCategory = styled.div`
-    float: center;
+  width: 100%;
 
-    width: 100%;
-
-    font-size: 1.2em;
-
-    text-align: center;
-
-    cursor: pointer;
+  margin-left: ${p => p.theme.sizes.tiny};
+  
+  cursor: pointer;
 `
 
 export const OpenCategory = styled.img`
-    float: left;
-    left: 10px;
+  float: left;
+  left: ${p => p.theme.sizes.tiny};;
 
-    margin: 0px 10px;
+  margin: 0px ${p => p.theme.sizes.tiny};;
 
-    height: 20px;
-    width: 20%;
-    max-width: 20px;
+  height: ${p => p.theme.sizes.small};
+  width: 20%;
+  max-width: ${p => p.theme.sizes.small};
 
-    transform: scale(1.2);
+  transform: scale(1.2);
 
-    cursor: pointer;
-
+  cursor: pointer;
 `
