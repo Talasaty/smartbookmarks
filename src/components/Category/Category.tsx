@@ -18,7 +18,7 @@ const CategoryContainer = styled.div`
   position: relative;
 
   height: ${p => p.theme.sizes.huge};
-  width: 400px;
+  width: 100%;
   max-width: 400px;
 
   margin: ${p => p.theme.sizes.tiny};
@@ -36,15 +36,21 @@ const CategoryContainer = styled.div`
   @media only screen and (max-width: 769px) {
     margin-left: 0px;
     margin-right: 0px;
+    max-width: 100%;
+    border-bottom: 1px solid ${p => p.theme.colors.darkGray}
   }
 `
 
 const ArrowCategory = styled.img.attrs({})<PropsStyle>`
-  max-width: ${p => p.theme.sizes.tiny};
+  max-width: ${p => p.theme.sizes.mini};
 
   transform: ${p => (p.arrowDown ? 'rotate(90deg)' : 'rotate(0deg)')};
 
   cursor: pointer;
+
+  @media only screen and (max-width: 769px) {
+    margin-left: 10px;
+  }
 `
 
 const NameCategory = styled.div`
@@ -62,12 +68,15 @@ const OpenCategory = styled.img`
   margin: 0px ${p => p.theme.sizes.tiny};
 
   height: ${p => p.theme.sizes.small};
-  width: 20%;
+  width: ${p => p.theme.sizes.small};
   max-width: ${p => p.theme.sizes.small};
 
   transform: scale(1.2);
 
   cursor: pointer;
+  @media only screen and (max-width: 769px){
+    display: none;
+  }
 `
 
 interface Props {

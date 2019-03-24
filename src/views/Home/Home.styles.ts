@@ -1,6 +1,9 @@
-import styled from 'styled-components'
-import { Button } from '$components/Button'
+import styled from "styled-components";
 
-export const HamburgerMenuButtom = styled(Button)`
-  margin: 0;
+
+export const HamburgerButton = styled.div`
+  display: none;
+  @media only screen and (max-width: 769px) {
+    display: block;
+  }
 `

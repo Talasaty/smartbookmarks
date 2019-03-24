@@ -9,19 +9,31 @@ import { Input } from '$components/Input'
 import search from '$icons/search.svg'
 import test01 from '$imgs/test01.jpg'
 import hamburger from '$icons/hamburger.svg'
-import { HamburgerMenuButtom } from './Home.styles'
+import { HamburgerButton } from './Home.styles'
+import { Button } from "$components/Button";
+interface State {
+  showMenu: boolean
+}
+export class Home extends React.Component<State> {
+  state = {
+    showMenu: false
+  }
 
-export class Home extends React.Component {
+  hamburgerMenuIsClicked = () => this.setState({showMenu: !this.state.showMenu})
   render() {
     const exampleText =
       'Lorem ipsum dolor sit amet consectetur adipiscing elit asdsfds'
     const NameCategory = 'Lorem ipsum dolor sit '
+    const { showMenu } = this.state
     return (
       <>
         <HeaderHome>
-          <HamburgerMenuButtom>
+          <HamburgerButton >
+          <Button onClick={() => this.hamburgerMenuIsClicked()}>
+
             <img src={hamburger} />
-          </HamburgerMenuButtom>
+          </Button>
+          </HamburgerButton>
           <Input
             iconRight={search}
             backgroundColor="blue"
@@ -31,7 +43,13 @@ export class Home extends React.Component {
           />
         </HeaderHome>
         <MainHome>
-          <AsideHome>
+          <AsideHome show={showMenu}>
+            <Category Name={NameCategory} />
+            <Category Name={NameCategory} />
+            <Category Name={NameCategory} />
+            <Category Name={NameCategory} />
+            <Category Name={NameCategory} />
+            <Category Name={NameCategory} />
             <Category Name={NameCategory} />
           </AsideHome>
           <SectionHome>

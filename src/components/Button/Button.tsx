@@ -61,17 +61,20 @@ interface Props {
     | 'lighthBlue'
     | 'darkBlue'
   type?: 'tiny' | 'normal' | 'big' | 'free'
+  onClick?: () => void
 }
 export const Button: React.SFC<Props> = ({
   children,
   backgroundColor,
   borderColor,
   type,
+  onClick
 }) => (
   <ButtonStyle
     backgroundColor={backgroundColor}
     borderColor={borderColor}
     type={type}
+    onClick={onClick}
   >
     {children}
   </ButtonStyle>

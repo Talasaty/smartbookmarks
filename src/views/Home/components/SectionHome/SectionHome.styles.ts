@@ -30,7 +30,10 @@ export const SectionWrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0;
+    margin-top: 60px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
     border-radius: 0;
     box-shadow: none;
     height: 100vh;
