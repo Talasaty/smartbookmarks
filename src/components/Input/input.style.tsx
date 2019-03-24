@@ -33,8 +33,9 @@ export const InputContainer = styled.div.attrs({})<Props>`
       : p.theme.colors.lightGray};
 
   @media only screen and (max-width: 769px) {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 350px;
   }
 `
 export const InputStyled = styled.input.attrs({})<Props>`
@@ -70,7 +71,7 @@ export const RightIcon = styled.img.attrs({})<Props>`
   float: right;
   left: ${p => p.theme.sizes.tiny};
 
-  margin: 0px 1 ${p => p.theme.sizes.xTiny};
+  margin: 0px ${p => p.theme.sizes.xTiny};
 
   height: ${p => p.theme.sizes.small};
   width: 20%;
@@ -88,7 +89,7 @@ export const LeftIcon = styled.img.attrs({})<Props>`
   float: left;
   right: ${p => p.theme.sizes.tiny};
 
-  margin: 0px 1 ${p => p.theme.sizes.xTiny};
+  margin: 0px ${p => p.theme.sizes.xTiny};
 
   height: ${p => p.theme.sizes.small};
   width: 20%;

@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 
 export const EditButtonStyle = styled.button`
-  position: absolute;
+  float: right;
 
   opacity: 0;
 
-  height: 3 ${p => p.theme.sizes.xTiny};
-  width: 3 ${p => p.theme.sizes.xTiny};
+  height: ${p => p.theme.sizes.large};
+  width: ${p => p.theme.sizes.large};
+
+  position: absolute;
 
   right: 0;
-  top: 0;
 
-  z-index: 999;
+  z-index: 5;
 
   color: blue;
 
@@ -32,6 +33,13 @@ export const EditButtonStyle = styled.button`
   outline: none;
   :hover {
     opacity: 0.8;
+  }
+
+  @media only screen and (max-width: 769px) {
+    opacity: 0.3;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
   }
 `
 

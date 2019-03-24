@@ -33,6 +33,18 @@ export class Home extends React.Component {
               <Picture img={test01} />
               <Description DescriptionText={exampleText} />
             </Card>
+            <Card>
+              <Picture img={test01} />
+              <Description DescriptionText={exampleText} />
+            </Card>
+            <Card>
+              <Picture img={test01} />
+              <Description DescriptionText={exampleText} />
+            </Card>
+            <Card>
+              <Picture img={test01} />
+              <Description DescriptionText={exampleText} />
+            </Card>
           </SectionHome>
         </MainHome>
       </>

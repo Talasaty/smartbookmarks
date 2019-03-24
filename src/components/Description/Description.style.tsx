@@ -5,9 +5,7 @@ export const DescriptionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  position: relative;
-
-  height: 30%;
+  flex-grow: 1;
 
   margin: ${p => p.theme.sizes.tiny};
 `

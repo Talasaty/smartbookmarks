@@ -15,4 +15,7 @@ export const HeaderContainer = styled.div`
 
   background-color: ${p => p.theme.colors.blue};
   box-shadow: 0 4px 2px -2px ${p => p.theme.colors.darkGray};
+
+  z-index: 10;
+
 `

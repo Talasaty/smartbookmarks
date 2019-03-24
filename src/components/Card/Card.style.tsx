@@ -7,9 +7,9 @@ export const CardContainer = styled.div`
   flex-direction: column;
 
   width: 180px;
-  height: 2 ${p => p.theme.sizes.small};
+  height: 220px;
 
-  margin: 0px;
+  margin: ${p => p.theme.sizes.tiny};
   padding: 0px;
 
   background-color: ${p => p.theme.colors.white};
@@ -18,4 +18,12 @@ export const CardContainer = styled.div`
 
   box-shadow: 0 10px ${p => p.theme.sizes.small} rgba(0, 0, 0, 0.19),
     0 6px 6px rgba(0, 0, 0, 0.23);
+
+  @media only screen and (max-width: 769px) {
+    width: 100%;
+    height: 220px;
+    border-radius: 0;
+
+  }
+
 `
