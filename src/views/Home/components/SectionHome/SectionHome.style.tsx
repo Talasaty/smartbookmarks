@@ -4,6 +4,9 @@ export const SectionWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
 
+  justify-content: center;
+  align-items: center;
+  
   width: 100%;
 
   padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.small};
