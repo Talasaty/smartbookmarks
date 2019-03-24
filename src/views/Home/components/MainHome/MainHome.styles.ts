@@ -11,7 +11,7 @@ export const MainWrapper = styled.div`
   min-height: 100vh;
 
   background-color: ${p => p.theme.colors.ligthGray};
-  
+
   @media only screen and (max-width: 769px) {
     flex-direction: column;
   }

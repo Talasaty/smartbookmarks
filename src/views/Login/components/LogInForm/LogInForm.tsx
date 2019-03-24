@@ -7,7 +7,7 @@ import {
   ButtonLoginContainer,
   ButtonSignInContainer,
   ForgotYourPassword,
-} from './LogInForm.style'
+} from './LogInForm.styles'
 
 import { Input } from '$components/Input'
 import { Text } from '$components/Text'
@@ -24,7 +24,12 @@ export class LogInForm extends React.Component {
               Usuario
             </Text>
           </LabelContainer>
-          <Input backgroundColor="white" borderColor="gray" color="text" />
+          <Input
+            backgroundColor="white"
+            borderColor="gray"
+            color="text"
+            type="free"
+          />
         </LogInInputContainer>
         <LogInInputContainer>
           <LabelContainer>
@@ -32,7 +37,12 @@ export class LogInForm extends React.Component {
               Contraseña
             </Text>
           </LabelContainer>
-          <Input backgroundColor="white" borderColor="gray" color="text" />
+          <Input
+            backgroundColor="white"
+            borderColor="gray"
+            color="text"
+            type="free"
+          />
           <ForgotYourPassword>
             <Text type="span" color="blue" size="h6">
               ¿Has olvidado la contraseña?

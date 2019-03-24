@@ -17,11 +17,11 @@ const sizesButon: SizesButon = {
 }
 
 const ButtonStyle = styled.button.attrs({})<Props>`
-  width: ${p => (p.type ? sizesButon[p.type] : '100px')};
+  width: ${p => (p.type ? sizesButon[p.type] : '')};
   min-height: 50px;
   max-height: 90%;
 
-  margin: 10px;
+  margin: 5px;
   padding: ${p => p.theme.sizes.xTiny};
 
   background-color: ${p =>

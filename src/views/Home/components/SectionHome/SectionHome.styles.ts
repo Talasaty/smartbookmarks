@@ -6,7 +6,7 @@ export const SectionWrapper = styled.div`
 
   justify-content: center;
   align-items: center;
-  
+
   width: 100%;
 
   padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.small};
@@ -34,6 +34,5 @@ export const SectionWrapper = styled.div`
     border-radius: 0;
     box-shadow: none;
     height: 100vh;
-
   }
 `

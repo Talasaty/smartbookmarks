@@ -8,6 +8,8 @@ import { Category } from '$components/Category'
 import { Input } from '$components/Input'
 import search from '$icons/search.svg'
 import test01 from '$imgs/test01.jpg'
+import hamburger from '$icons/hamburger.svg'
+import { HamburgerMenuButtom } from './Home.styles'
 
 export class Home extends React.Component {
   render() {
@@ -17,11 +19,15 @@ export class Home extends React.Component {
     return (
       <>
         <HeaderHome>
+          <HamburgerMenuButtom>
+            <img src={hamburger} />
+          </HamburgerMenuButtom>
           <Input
             iconRight={search}
             backgroundColor="blue"
             borderColor="blue"
             color="gray"
+            type="restricted"
           />
         </HeaderHome>
         <MainHome>
