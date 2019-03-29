@@ -9,7 +9,7 @@ interface PropsStyle {
   arrowDown: boolean
 }
 
-const CategoryContainer = styled.div`
+const CategoryContainer = styled.div.attrs({})`
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -17,7 +17,6 @@ const CategoryContainer = styled.div`
 
   position: relative;
 
-  height: ${p => p.theme.sizes.huge};
   width: 100%;
   max-width: 400px;
 
@@ -67,9 +66,8 @@ const OpenCategory = styled.img`
 
   margin: 0px ${p => p.theme.sizes.tiny};
 
-  height: ${p => p.theme.sizes.small};
-  width: ${p => p.theme.sizes.small};
-  max-width: ${p => p.theme.sizes.small};
+  height: ${p => p.theme.sizes.mini};
+  width: ${p => p.theme.sizes.mini};
 
   transform: scale(1.2);
 
@@ -86,17 +84,21 @@ interface Props {
 export class Category extends React.Component<Props> {
   state = {
     categoryWasClicked: false,
+    isOver: false
   }
 
   changeOrientationArrow = () => {
     this.setState({ categoryWasClicked: !this.state.categoryWasClicked })
   }
 
+  setOverState = () =>{
+    this.setState({isOver: !this.state.isOver})
+  }
   render() {
     const { Name } = this.props
-    const { categoryWasClicked } = this.state
+    const { categoryWasClicked, isOver } = this.state
     return (
-      <CategoryContainer>
+      <CategoryContainer onMouseOver={this.setOverState} onMouseOut={this.setOverState}>
         <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
         <ArrowCategory
           src={arrowRigth}
@@ -108,7 +110,7 @@ export class Category extends React.Component<Props> {
             {Name.substr(0, 22)}
           </Text>
         </NameCategory>
-        <EditButton />
+        <EditButton isOver={isOver}/>
       </CategoryContainer>
     )
   }

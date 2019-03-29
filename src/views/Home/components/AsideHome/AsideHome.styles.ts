@@ -11,7 +11,7 @@ export const AsideWrapper = styled.div.attrs({})<Prop>`
   width: 100%;
 
   margin-top: ${p => p.theme.sizes.huge};
-  padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.small};
+  padding: ${p => p.theme.sizes.small};
 
   overflow-x: hidden;
   overflow-y: auto;

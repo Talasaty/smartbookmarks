@@ -2,10 +2,14 @@ import * as React from 'react'
 import edit from '$icons/edit.svg'
 import styled from 'styled-components'
 
-const EditButtonStyle = styled.button`
+interface Props {
+  isOver?: boolean
+}
+
+const EditButtonStyle = styled.button.attrs({})<Props>`
   float: right;
 
-  opacity: 0;
+  opacity: ${p => p.isOver ? 1 : 0};
 
   height: ${p => p.theme.sizes.large};
   width: ${p => p.theme.sizes.large};
@@ -49,8 +53,8 @@ const EditImg = styled.img`
   background-color: transparent;
 `
 
-export const EditButton: React.SFC = () => (
-  <EditButtonStyle>
+export const EditButton: React.SFC<Props> = ({isOver}) => (
+  <EditButtonStyle isOver={isOver}>
     <EditImg src={edit} />
   </EditButtonStyle>
 )

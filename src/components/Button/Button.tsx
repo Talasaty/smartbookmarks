@@ -18,11 +18,10 @@ const sizesButon: SizesButon = {
 
 const ButtonStyle = styled.button.attrs({})<Props>`
   width: ${p => (p.type ? sizesButon[p.type] : '')};
-  min-height: 50px;
-  max-height: 90%;
+
 
   margin: 5px;
-  padding: ${p => p.theme.sizes.xTiny};
+  padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.tiny};
 
   background-color: ${p =>
     p.backgroundColor ? colors[p.backgroundColor] : 'transparent'};
