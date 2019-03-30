@@ -9,7 +9,7 @@ export const SectionWrapper = styled.div`
 
   width: 100%;
 
-  padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.small};
+  padding: ${p => p.theme.sizes.small};
   margin-top: 80px;
   margin-right: ${p => p.theme.sizes.small};
   margin-left: ${p => p.theme.sizes.small};

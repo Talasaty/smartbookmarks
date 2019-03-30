@@ -33,7 +33,7 @@ interface Props {
 }
 export const Card: React.SFC<Props> = ({ children }) => (
   <CardContainer>
-    <EditButton />
+    <EditButton backgroundColor="ligthGray" type="round"/>
     {children}
   </CardContainer>
 )

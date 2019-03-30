@@ -53,7 +53,8 @@ const ArrowCategory = styled.img.attrs({})<PropsStyle>`
 `
 
 const NameCategory = styled.div`
-  width: 100%;
+display: flex;
+align-items: center;
 
   margin-left: ${p => p.theme.sizes.tiny};
 
@@ -108,7 +109,9 @@ export class Category extends React.Component<Props> {
         <NameCategory onClick={() => this.changeOrientationArrow()}>
           <Text type="span" color="text" size="h5">
             {Name.substr(0, 22)}
+            
           </Text>
+          
         </NameCategory>
         <EditButton isOver={isOver}/>
       </CategoryContainer>

@@ -1,9 +1,12 @@
 import * as React from 'react'
 import edit from '$icons/edit.svg'
 import styled from 'styled-components'
+import { colors } from '$utils/theme/colors'
 
 interface Props {
   isOver?: boolean
+  backgroundColor?: 'ligthGray'| 'darkGray'| 'white'| 'black'| 'text'| 'blue'| 'blue2'| 'lighthBlue'| 'darkBlue' 
+  type?: 'round' | 'none'
 }
 
 const EditButtonStyle = styled.button.attrs({})<Props>`
@@ -11,12 +14,8 @@ const EditButtonStyle = styled.button.attrs({})<Props>`
 
   opacity: ${p => p.isOver ? 1 : 0};
 
-  height: ${p => p.theme.sizes.large};
-  width: ${p => p.theme.sizes.large};
-
-  position: absolute;
-
-  right: 0;
+  height: 30px;
+  width: 30px;
 
   z-index: 5;
 
@@ -27,14 +26,13 @@ const EditButtonStyle = styled.button.attrs({})<Props>`
   margin: 3px;
   padding: ${p => p.theme.sizes.xTiny};
 
-  border: 1px solid #f0f0f0;
-  border-radius: 50%;
+  border: 1px solid ${p => p.backgroundColor ? colors[p.backgroundColor] : 'transparent'};
 
-  background-color: #f0f0f0;
+  border-radius: ${p => p.type === 'round' ? '50%' : '0'};
 
-  box-shadow: 0 ${p => p.theme.sizes.tiny} ${p => p.theme.sizes.small}
-      rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
+  background-color: ${p => p.backgroundColor ? colors[p.backgroundColor] : 'transparent'};
+
+  box-shadow: ${p => p.type === 'round' ? (`0 ${p.theme.sizes.tiny} ${p.theme.sizes.small} rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)`) : 'none' };
 
   outline: none;
   :hover {
@@ -49,12 +47,10 @@ const EditButtonStyle = styled.button.attrs({})<Props>`
   }
 `
 
-const EditImg = styled.img`
-  background-color: transparent;
-`
 
-export const EditButton: React.SFC<Props> = ({isOver}) => (
-  <EditButtonStyle isOver={isOver}>
-    <EditImg src={edit} />
+
+export const EditButton: React.SFC<Props> = ({isOver, backgroundColor, type}) => (
+  <EditButtonStyle backgroundColor={backgroundColor} isOver={isOver} type={type}>
+    <img src={edit} />
   </EditButtonStyle>
 )
