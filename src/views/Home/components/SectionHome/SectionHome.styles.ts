@@ -2,9 +2,14 @@ import styled from 'styled-components'
 
 export const SectionWrapper = styled.div`
   display: flex;
-  flex-grow: 3;
+  flex-wrap: wrap;
 
-  padding: 1 ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.small};
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  padding: ${p => p.theme.sizes.small};
   margin-top: 80px;
   margin-right: ${p => p.theme.sizes.small};
   margin-left: ${p => p.theme.sizes.small};
@@ -22,8 +27,15 @@ export const SectionWrapper = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   @media only screen and (max-width: 769px) {
-    width: 100vw;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin-top: 60px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100vh;
   }
 `

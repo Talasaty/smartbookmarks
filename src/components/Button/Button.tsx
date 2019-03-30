@@ -17,12 +17,11 @@ const sizesButon: SizesButon = {
 }
 
 const ButtonStyle = styled.button.attrs({})<Props>`
-  width: ${p => (p.type ? sizesButon[p.type] : '100px')};
-  min-height: 50px;
-  max-height: 90%;
+  width: ${p => (p.type ? sizesButon[p.type] : '')};
 
-  margin: 10px;
-  padding: ${p => p.theme.sizes.xTiny};
+
+  margin: 5px;
+  padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.tiny};
 
   background-color: ${p =>
     p.backgroundColor ? colors[p.backgroundColor] : 'transparent'};
@@ -61,17 +60,20 @@ interface Props {
     | 'lighthBlue'
     | 'darkBlue'
   type?: 'tiny' | 'normal' | 'big' | 'free'
+  onClick?: () => void
 }
 export const Button: React.SFC<Props> = ({
   children,
   backgroundColor,
   borderColor,
   type,
+  onClick
 }) => (
   <ButtonStyle
     backgroundColor={backgroundColor}
     borderColor={borderColor}
     type={type}
+    onClick={onClick}
   >
     {children}
   </ButtonStyle>

@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { AsideWrapper } from './AsideHome.style'
+import { AsideWrapper } from './AsideHome.styles'
 
-export class AsideHome extends React.Component {
-  render() {
-    return <AsideWrapper>{this.props.children}</AsideWrapper>
-  }
+interface Prop {
+  show: boolean
 }
+export const AsideHome: React.SFC<Prop> = ({ children, show }) => (
+  <AsideWrapper show={show}>{children}</AsideWrapper>
+)

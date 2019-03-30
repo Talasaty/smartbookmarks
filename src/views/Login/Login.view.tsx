@@ -1,13 +1,9 @@
 import * as React from 'react'
 import { LogInForm } from './components'
-import { LoginContainer } from './Login.style'
+import { LoginContainer } from './Login.styles'
 
-export class Login extends React.Component {
-  render() {
-    return (
-      <LoginContainer>
-        <LogInForm />
-      </LoginContainer>
-    )
-  }
-}
+export const Login: React.SFC = () => (
+  <LoginContainer>
+    <LogInForm />
+  </LoginContainer>
+)

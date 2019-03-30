@@ -48,11 +48,13 @@ export const ForgotYourPassword = styled(LabelContainer)`
 `
 
 export const ButtonLoginContainer = styled.div`
+  
   display: flex;
 
   justify-content: flex-end;
 
   margin-top: 10px;
+  margin-right: ${p => p.theme.sizes.tiny};
 `
 
 export const ButtonSignInContainer = styled.div`

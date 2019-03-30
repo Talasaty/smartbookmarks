@@ -1,14 +1,82 @@
 import * as React from 'react'
-import {
-  CategoryContainer,
-  ArrowCategory,
-  NameCategory,
-  OpenCategory,
-} from './Category.style'
 import arrowRigth from '$icons/arrowRigth.svg'
 import launch from '$icons/launch.svg'
 import { EditButton } from '$components/Edit'
 import { Text } from '$components/Text'
+import styled from 'styled-components'
+
+interface PropsStyle {
+  arrowDown: boolean
+}
+
+const CategoryContainer = styled.div.attrs({})`
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 400px;
+
+  margin: ${p => p.theme.sizes.tiny};
+
+  opacity: 0.6;
+
+  :hover {
+    opacity: 0.8;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+
+  @media only screen and (max-width: 769px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+    border-bottom: 1px solid ${p => p.theme.colors.darkGray}
+  }
+`
+
+const ArrowCategory = styled.img.attrs({})<PropsStyle>`
+  max-width: ${p => p.theme.sizes.mini};
+
+  transform: ${p => (p.arrowDown ? 'rotate(90deg)' : 'rotate(0deg)')};
+
+  cursor: pointer;
+
+  @media only screen and (max-width: 769px) {
+    margin-left: 10px;
+  }
+`
+
+const NameCategory = styled.div`
+display: flex;
+align-items: center;
+
+  margin-left: ${p => p.theme.sizes.tiny};
+
+  cursor: pointer;
+`
+
+const OpenCategory = styled.img`
+  float: left;
+  left: ${p => p.theme.sizes.tiny};
+
+  margin: 0px ${p => p.theme.sizes.tiny};
+
+  height: ${p => p.theme.sizes.mini};
+  width: ${p => p.theme.sizes.mini};
+
+  transform: scale(1.2);
+
+  cursor: pointer;
+  @media only screen and (max-width: 769px){
+    display: none;
+  }
+`
 
 interface Props {
   Name: string
@@ -17,17 +85,21 @@ interface Props {
 export class Category extends React.Component<Props> {
   state = {
     categoryWasClicked: false,
+    isOver: false
   }
 
   changeOrientationArrow = () => {
     this.setState({ categoryWasClicked: !this.state.categoryWasClicked })
   }
 
+  setOverState = () =>{
+    this.setState({isOver: !this.state.isOver})
+  }
   render() {
     const { Name } = this.props
-    const { categoryWasClicked } = this.state
+    const { categoryWasClicked, isOver } = this.state
     return (
-      <CategoryContainer>
+      <CategoryContainer onMouseOver={this.setOverState} onMouseOut={this.setOverState}>
         <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
         <ArrowCategory
           src={arrowRigth}
@@ -37,9 +109,11 @@ export class Category extends React.Component<Props> {
         <NameCategory onClick={() => this.changeOrientationArrow()}>
           <Text type="span" color="text" size="h5">
             {Name.substr(0, 22)}
+            
           </Text>
+          
         </NameCategory>
-        <EditButton />
+        <EditButton isOver={isOver}/>
       </CategoryContainer>
     )
   }
