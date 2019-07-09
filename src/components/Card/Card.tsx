@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { EditButton } from '$components/Edit/Edit'
 
-import styled from 'styled-components'
+import { styled } from '$utils/theme/themeStyledComponents';
 
 const CardContainer = styled.div`
   position: relative;

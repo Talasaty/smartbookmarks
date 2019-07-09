@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import { styled } from '$utils/theme/themeStyledComponents';
 import { colors } from '$utils/theme/colors'
 import { fontSize, fontWeight } from '$utils/theme/font'
 

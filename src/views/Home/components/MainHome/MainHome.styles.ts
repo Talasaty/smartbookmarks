@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from '$utils/theme/themeStyledComponents';
 
 export const MainWrapper = styled.div`
   display: flex;

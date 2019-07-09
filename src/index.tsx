@@ -2,15 +2,10 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import './index.css'
 import Root from '$views/Root'
-import { ThemeProvider } from 'styled-components'
-import { colors } from '$utils/theme/colors'
-import { sizes } from '$utils/theme/sizes'
-import { fontSize, fontWeight } from '$utils/theme/font'
-
-const theme = { colors, sizes, fontWeight, fontSize }
+import {ThemeProvider } from '$utils/theme/ThemeProvider'
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
+  <ThemeProvider>
     <Root />
   </ThemeProvider>,
   document.getElementById('root') as HTMLElement,

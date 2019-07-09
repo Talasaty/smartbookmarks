@@ -1,6 +1,7 @@
 import * as React from 'react'
-import styled from 'styled-components'
-import { colors } from '../../utils/theme/colors'
+
+import { colors } from '$utils/theme/colors'
+import { styled } from '$utils/theme/themeStyledComponents';
 
 export interface SizesButon {
   tiny: string
