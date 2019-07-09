@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import { styled } from '$utils/theme/themeStyledComponents';
 
 const InputContainer = styled.div.attrs({})<Props>`
   display: flex;
@@ -25,7 +25,7 @@ const InputContainer = styled.div.attrs({})<Props>`
       ? p.theme.colors.white
       : p.backgroundColor === 'blue'
       ? p.theme.colors.blue2
-      : p.theme.colors.lightGray};
+      : p.theme.colors.ligthGray};
 
   @media only screen and (max-width: 769px) {
     margin-left: 0;
@@ -43,7 +43,7 @@ const InputStyled = styled.input.attrs({})<Props>`
       ? p.theme.colors.white
       : p.backgroundColor === 'blue'
       ? p.theme.colors.blue2
-      : p.theme.colors.lightGray};
+      : p.theme.colors.ligthGray};
 
   text-align: right;
 
@@ -77,7 +77,7 @@ const RightIcon = styled.img.attrs({})<Props>`
       ? p.theme.colors.white
       : p.backgroundColor === 'blue'
       ? p.theme.colors.blue2
-      : p.theme.colors.lightGray};
+      : p.theme.colors.ligthGray};
 `
 
 const LeftIcon = styled.img.attrs({})<Props>`
@@ -95,7 +95,7 @@ const LeftIcon = styled.img.attrs({})<Props>`
       ? p.theme.colors.white
       : p.backgroundColor === 'blue'
       ? p.theme.colors.blue2
-      : p.theme.colors.lightGray};
+      : p.theme.colors.ligthGray};
 `
 
 interface Props {

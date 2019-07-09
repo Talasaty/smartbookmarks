@@ -3,7 +3,7 @@ import arrowRigth from '$icons/arrowRigth.svg'
 import launch from '$icons/launch.svg'
 import { EditButton } from '$components/Edit'
 import { Text } from '$components/Text'
-import styled from 'styled-components'
+import { styled } from '$utils/theme/themeStyledComponents';
 
 interface PropsStyle {
   arrowDown: boolean

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from '$utils/theme/themeStyledComponents';
 
 export const PictureContainer = styled.img`
   flex-grow: 1;

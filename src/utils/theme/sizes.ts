@@ -1,4 +1,4 @@
-interface Sizes {
+export interface Sizes {
   xTiny: string
   tiny: string
   mini: string

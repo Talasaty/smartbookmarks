@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from '$utils/theme/themeStyledComponents';
 
 export const LogInContainer = styled.div`
   position: relative;

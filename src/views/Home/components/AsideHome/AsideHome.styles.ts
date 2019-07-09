@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from '$utils/theme/themeStyledComponents';
 
 interface Prop {
   show: boolean
