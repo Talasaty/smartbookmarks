@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { styled } from '$utils/theme/themeStyledComponents';
+import { styled } from '$utils/theme/themeStyledComponents'
+import { Field } from 'formik'
 
 const InputContainer = styled.div.attrs({})<Props>`
   display: flex;
@@ -9,7 +10,7 @@ const InputContainer = styled.div.attrs({})<Props>`
 
   height: ${p => p.theme.sizes.large};
   width: 100%;
-  max-width: ${p => (p.type === 'restricted' ? '450px' : '100%')};
+  max-width: ${p => (p.typeInput === 'restricted' ? '450px' : '100%')};
 
   border-radius: ${p => p.theme.sizes.tiny};
   border: 1px solid
@@ -30,7 +31,7 @@ const InputContainer = styled.div.attrs({})<Props>`
   @media only screen and (max-width: 769px) {
     margin-left: 0;
     margin-right: 0;
-    max-width: ${p => (p.type === 'restricted' ? '300px' : '100%')};
+    max-width: ${p => (p.typeInput === 'restricted' ? '300px' : '100%')};
   }
 `
 const InputStyled = styled.input.attrs({})<Props>`
@@ -104,26 +105,31 @@ interface Props {
   backgroundColor?: 'blue' | 'white' | 'gray'
   borderColor?: 'blue' | 'white' | 'gray'
   color?: 'text' | 'white' | 'gray'
-  type?: 'free' | 'restricted'
+  typeInput?: 'free' | 'restricted'
 }
 
-export const Input: React.SFC<Props> = ({
+const InputRaw: React.SFC<Props> = ({
   iconLeft,
   iconRight,
   backgroundColor,
   borderColor,
   color,
-  type,
+  typeInput,
+  ...props
 }) => (
   <InputContainer
     backgroundColor={backgroundColor}
     borderColor={borderColor}
-    type={type}
+    typeInput={typeInput}
   >
     {iconLeft && <LeftIcon src={iconLeft} backgroundColor={backgroundColor} />}
-    <InputStyled backgroundColor={backgroundColor} color={color} />
+    <InputStyled backgroundColor={backgroundColor} color={color} {...props} />
     {iconRight && (
       <RightIcon src={iconRight} backgroundColor={backgroundColor} />
     )}
   </InputContainer>
 )
+
+export const Input: React.SFC<Props & React.HTMLProps<HTMLInputElement>> = ({
+  ...props
+}) => <Field component={InputRaw} {...props} />
