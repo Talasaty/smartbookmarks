@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { colors } from '$utils/theme/colors'
-import { styled } from '$utils/theme/themeStyledComponents';
+import { colors, ColorsOptions } from '$utils/theme/colors'
+import { styled } from '$utils/theme/themeStyledComponents'
 
 export interface SizesButon {
   tiny: string
@@ -17,9 +17,10 @@ const sizesButon: SizesButon = {
   free: '100%',
 }
 
+type typeOptions = 'tiny' | 'normal' | 'big' | 'free'
+
 const ButtonStyle = styled.button.attrs({})<Props>`
   width: ${p => (p.type ? sizesButon[p.type] : '')};
-
 
   margin: 5px;
   padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.tiny};
@@ -40,27 +41,9 @@ const ButtonStyle = styled.button.attrs({})<Props>`
 `
 interface Props {
   children?: React.ReactNode
-  backgroundColor?:
-    | 'ligthGray'
-    | 'darkGray'
-    | 'white'
-    | 'black'
-    | 'text'
-    | 'blue'
-    | 'blue2'
-    | 'lighthBlue'
-    | 'darkBlue'
-  borderColor?:
-    | 'ligthGray'
-    | 'darkGray'
-    | 'white'
-    | 'black'
-    | 'text'
-    | 'blue'
-    | 'blue2'
-    | 'lighthBlue'
-    | 'darkBlue'
-  type?: 'tiny' | 'normal' | 'big' | 'free'
+  backgroundColor?: ColorsOptions
+  borderColor?: ColorsOptions
+  type?: typeOptions
   onClick?: () => void
 }
 export const Button: React.SFC<Props> = ({
@@ -68,7 +51,7 @@ export const Button: React.SFC<Props> = ({
   backgroundColor,
   borderColor,
   type,
-  onClick
+  onClick,
 }) => (
   <ButtonStyle
     backgroundColor={backgroundColor}

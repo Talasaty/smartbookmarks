@@ -35,3 +35,13 @@ export const fontWeight: FontWeight = {
   regular: '400',
   bold: '700',
 }
+
+export type FontSizeOptions = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+export type FontWeightOptions =
+  | 'light'
+  | 'semiBold'
+  | 'medium'
+  | 'regular'
+  | 'bold'
+  | 'tiny'
+  | 'small'

@@ -21,3 +21,14 @@ export const colors: Colors = {
   lighthBlue: '#8187FF',
   darkBlue: '#0031CA',
 }
+
+export type ColorsOptions =
+  | 'ligthGray'
+  | 'darkGray'
+  | 'white'
+  | 'black'
+  | 'text'
+  | 'blue'
+  | 'blue2'
+  | 'lighthBlue'
+  | 'darkBlue'
