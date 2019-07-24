@@ -1,7 +1,12 @@
 import * as React from 'react'
-import { styled } from '$utils/theme/themeStyledComponents';
-import { colors } from '$utils/theme/colors'
-import { fontSize, fontWeight } from '$utils/theme/font'
+import { styled } from '$utils/theme/themeStyledComponents'
+import { colors, ColorsOptions } from '$utils/theme/colors'
+import {
+  fontSize,
+  fontWeight,
+  FontSizeOptions,
+  FontWeightOptions,
+} from '$utils/theme/font'
 
 const P = styled.p.attrs({})<Props>`
   font-size: ${p => (p.size ? fontSize[p.size] : p.theme.fontSize.h5)};
@@ -31,25 +36,9 @@ const Span = styled.span.attrs({})<Props>`
 `
 
 interface Props {
-  color?:
-    | 'ligthGray'
-    | 'darkGray'
-    | 'white'
-    | 'black'
-    | 'text'
-    | 'blue'
-    | 'blue2'
-    | 'lighthBlue'
-    | 'darkBlue'
-  size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  weight?:
-    | 'light'
-    | 'semiBold'
-    | 'medium'
-    | 'regular'
-    | 'bold'
-    | 'tiny'
-    | 'small'
+  color?: ColorsOptions
+  size?: FontSizeOptions
+  weight?: FontWeightOptions
   type?: 'p' | 'span'
   children?: React.ReactNode
 }
