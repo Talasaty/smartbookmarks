@@ -20,7 +20,7 @@ const sizesButon: SizesButon = {
 type typeOptions = 'tiny' | 'normal' | 'big' | 'free'
 
 const ButtonStyle = styled.button.attrs({})<Props>`
-  width: ${p => (p.type ? sizesButon[p.type] : '')};
+  min-width: ${p => (p.type ? sizesButon[p.type] : '')};
 
   margin: 5px;
   padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.tiny};
