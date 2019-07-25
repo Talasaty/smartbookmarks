@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { styled } from '$utils/theme/themeStyledComponents'
-import { Field } from 'formik'
 
 const InputContainer = styled.div.attrs({})<Props>`
   display: flex;
@@ -108,7 +107,7 @@ interface Props {
   typeInput?: 'free' | 'restricted'
 }
 
-const InputRaw: React.SFC<Props> = ({
+export const Input: React.SFC<Props> = ({
   iconLeft,
   iconRight,
   backgroundColor,
@@ -123,13 +122,13 @@ const InputRaw: React.SFC<Props> = ({
     typeInput={typeInput}
   >
     {iconLeft && <LeftIcon src={iconLeft} backgroundColor={backgroundColor} />}
-    <InputStyled backgroundColor={backgroundColor} color={color} {...props} />
+    <InputStyled
+      backgroundColor={backgroundColor}
+      color={color ? color : 'text'}
+      {...props}
+    />
     {iconRight && (
       <RightIcon src={iconRight} backgroundColor={backgroundColor} />
     )}
   </InputContainer>
 )
-
-export const Input: React.SFC<Props & React.HTMLProps<HTMLInputElement>> = ({
-  ...props
-}) => <Field component={InputRaw} {...props} />
