@@ -9,10 +9,10 @@ import {
   ForgotYourPassword,
 } from './LogInForm.styles'
 
-import { Input } from '$components/Input'
 import { Text } from '$components/Text'
 import { Button } from '$components/Button'
 import { Formik, Form } from 'formik'
+import { InputFiled } from 'src/formiksComponents/InputFiled/InputField'
 
 export class LogInForm extends React.Component {
   render() {
@@ -35,7 +35,7 @@ export class LogInForm extends React.Component {
                     Usuario
                   </Text>
                 </LabelContainer>
-                <Input
+                <InputFiled
                   backgroundColor="white"
                   borderColor="gray"
                   color="text"
@@ -50,7 +50,7 @@ export class LogInForm extends React.Component {
                     Contraseña
                   </Text>
                 </LabelContainer>
-                <Input
+                <InputFiled
                   backgroundColor="white"
                   borderColor="gray"
                   color="text"

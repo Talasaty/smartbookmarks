@@ -2,9 +2,7 @@ import * as React from 'react'
 
 import { MainHome, SectionHome, AsideHome, HeaderHome } from './components'
 import { Card } from '$components/Card/Card'
-import { Description } from '$components/Description'
 import { Category } from '$components/Category'
-import { Input } from '$components/Input'
 import search from '$icons/search.svg'
 import test01 from '$imgs/test01.jpg'
 import hamburger from '$icons/hamburger.svg'
@@ -13,6 +11,8 @@ import { Button } from '$components/Button'
 import { Formik, Form } from 'formik'
 import { EditButton } from '$components/EditButton'
 import { Preview } from '$components/Preview'
+import { InputFiled } from 'src/formiksComponents/InputFiled/InputField'
+import { Text } from '$components/Text'
 interface State {
   showMenu: boolean
 }
@@ -24,8 +24,6 @@ export class Home extends React.Component<State> {
   hamburgerMenuIsClicked = () =>
     this.setState({ showMenu: !this.state.showMenu })
   render() {
-    const exampleText =
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit asdsfds'
     const NameCategory = 'Lorem ipsum dolor sit '
     const { showMenu } = this.state
     return (
@@ -45,7 +43,7 @@ export class Home extends React.Component<State> {
                   <img src={hamburger} />
                 </Button>
               </HamburgerButton>
-              <Input
+              <InputFiled
                 iconRight={search}
                 backgroundColor="blue"
                 borderColor="blue"
@@ -69,47 +67,74 @@ export class Home extends React.Component<State> {
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
                 <Card>
                   <EditButton backgroundColor="ligthGray" type="round" />
                   <Preview img={test01} />
-                  <Description descriptionText={exampleText} />
+                  <Text typeText="span" color="black" weight="small" size="h5">
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    asdsfds'
+                  </Text>
                 </Card>
               </SectionHome>
             </MainHome>
