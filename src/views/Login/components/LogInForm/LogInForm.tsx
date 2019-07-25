@@ -31,7 +31,7 @@ export class LogInForm extends React.Component {
               <LogInHeader />
               <LogInInputContainer>
                 <LabelContainer>
-                  <Text weight="medium" type="span">
+                  <Text weight="medium" typeText="span">
                     Usuario
                   </Text>
                 </LabelContainer>
@@ -46,7 +46,7 @@ export class LogInForm extends React.Component {
               </LogInInputContainer>
               <LogInInputContainer>
                 <LabelContainer>
-                  <Text weight="medium" type="span">
+                  <Text weight="medium" typeText="span">
                     Contraseña
                   </Text>
                 </LabelContainer>
@@ -59,21 +59,21 @@ export class LogInForm extends React.Component {
                   name="password"
                 />
                 <ForgotYourPassword>
-                  <Text type="span" color="blue" size="h6">
+                  <Text typeText="span" color="blue" size="h6">
                     ¿Has olvidado la contraseña?
                   </Text>
                 </ForgotYourPassword>
               </LogInInputContainer>
               <ButtonLoginContainer>
                 <Button backgroundColor="blue2">
-                  <Text weight="small" type="span" color="white">
+                  <Text weight="small" typeText="span" color="white">
                     Login
                   </Text>
                 </Button>
               </ButtonLoginContainer>
               <ButtonSignInContainer>
                 <Button type="big">
-                  <Text type="span" color="blue" size="h6">
+                  <Text typeText="span" color="blue" size="h6">
                     Registrate aquí
                   </Text>
                 </Button>

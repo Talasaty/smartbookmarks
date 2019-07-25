@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { styled } from '$utils/theme/themeStyledComponents';
+import { styled } from '$utils/theme/themeStyledComponents'
 
 export const DescriptionContainer = styled.div`
   display: flex;
@@ -12,9 +12,9 @@ export const DescriptionContainer = styled.div`
 `
 
 interface Props {
-  DescriptionText: string
+  descriptionText: string
 }
 
-export const Description: React.SFC<Props> = ({ DescriptionText }) => (
-  <DescriptionContainer>{DescriptionText.substr(0, 60)}</DescriptionContainer>
+export const Description: React.SFC<Props> = ({ descriptionText }) => (
+  <DescriptionContainer>{descriptionText.substr(0, 60)}</DescriptionContainer>
 )

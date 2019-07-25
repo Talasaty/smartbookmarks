@@ -2,7 +2,6 @@ import * as React from 'react'
 
 import { MainHome, SectionHome, AsideHome, HeaderHome } from './components'
 import { Card } from '$components/Card/Card'
-import { Picture } from '$components/Picture'
 import { Description } from '$components/Description'
 import { Category } from '$components/Category'
 import { Input } from '$components/Input'
@@ -12,6 +11,8 @@ import hamburger from '$icons/hamburger.svg'
 import { HamburgerButton } from './Home.styles'
 import { Button } from '$components/Button'
 import { Formik, Form } from 'formik'
+import { EditButton } from '$components/EditButton'
+import { Preview } from '$components/Preview'
 interface State {
   showMenu: boolean
 }
@@ -56,50 +57,59 @@ export class Home extends React.Component<State> {
             </HeaderHome>
             <MainHome>
               <AsideHome show={showMenu}>
-                <Category Name={NameCategory} />
-                <Category Name={NameCategory} />
-                <Category Name={NameCategory} />
-                <Category Name={NameCategory} />
-                <Category Name={NameCategory} />
-                <Category Name={NameCategory} />
-                <Category Name={NameCategory} />
+                <Category name={NameCategory} />
+                <Category name={NameCategory} />
+                <Category name={NameCategory} />
+                <Category name={NameCategory} />
+                <Category name={NameCategory} />
+                <Category name={NameCategory} />
+                <Category name={NameCategory} />
               </AsideHome>
               <SectionHome>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
                 <Card>
-                  <Picture img={test01} />
-                  <Description DescriptionText={exampleText} />
+                  <EditButton backgroundColor="ligthGray" type="round" />
+                  <Preview img={test01} />
+                  <Description descriptionText={exampleText} />
                 </Card>
               </SectionHome>
             </MainHome>

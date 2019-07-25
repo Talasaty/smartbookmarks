@@ -39,7 +39,7 @@ interface Props {
   color?: ColorsOptions
   size?: FontSizeOptions
   weight?: FontWeightOptions
-  type?: 'p' | 'span'
+  typeText?: 'p' | 'span'
   children?: React.ReactNode
 }
 
@@ -47,10 +47,10 @@ export const Text: React.SFC<Props> = ({
   color,
   size,
   weight,
-  type,
+  typeText,
   children,
 }) => {
-  if (type === 'span') {
+  if (typeText === 'span') {
     return (
       <Span color={color} size={size} weight={weight}>
         {children}

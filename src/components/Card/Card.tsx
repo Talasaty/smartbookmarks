@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { EditButton } from '$components/Edit/Edit'
 
-import { styled } from '$utils/theme/themeStyledComponents';
+import { styled } from '$utils/theme/themeStyledComponents'
 
 const CardContainer = styled.div`
   position: relative;
@@ -13,7 +12,7 @@ const CardContainer = styled.div`
   height: 220px;
 
   margin: ${p => p.theme.sizes.tiny};
-  padding: 0px;
+  padding: 5px;
 
   background-color: ${p => p.theme.colors.white};
 
@@ -32,8 +31,5 @@ interface Props {
   children?: React.ReactNode
 }
 export const Card: React.SFC<Props> = ({ children }) => (
-  <CardContainer>
-    <EditButton backgroundColor="ligthGray" type="round"/>
-    {children}
-  </CardContainer>
+  <CardContainer>{children}</CardContainer>
 )
