@@ -1,16 +1,22 @@
 import * as React from 'react'
-import { styled } from '$utils/theme/themeStyledComponents'
-
-const CanvasContainer = styled.div`
-  background-color: blue;
-  width: 100%;
-  height: 100vh;
-`
-
+import { CanvasContainer, Bubbles } from './Canvas.styles'
 interface Props {
   children: React.ReactNode
 }
 
-export const Canvas: React.FC<Props> = ({ children }) => (
-  <CanvasContainer>{children}</CanvasContainer>
-)
+export const Canvas: React.FC<Props> = ({ children }) => {
+  let bubbles = new Array(10)
+
+  for (var i = 0; i < bubbles.length; i++) {
+    bubbles[i] = i
+  }
+
+  return (
+    <CanvasContainer>
+      {children}
+      {bubbles.map(value => (
+        <Bubbles key={value} />
+      ))}
+    </CanvasContainer>
+  )
+}
