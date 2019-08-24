@@ -8,18 +8,20 @@ export interface Colors {
   blue2: string
   lighthBlue: string
   darkBlue: string
+  pink: string
 }
 
 export const colors: Colors = {
-  ligthGray: '#F0F0F0',
+  ligthGray: '#cfc7c0',
   darkGray: '#808080',
   white: '#FFFFFF',
   black: '#000000',
   text: '#1D1D1D',
   blue: '#3096F3',
   blue2: '#57aff5',
-  lighthBlue: '#8187FF',
+  lighthBlue: '#D5DCFA',
   darkBlue: '#0031CA',
+  pink: '#FC49D2',
 }
 
 export type ColorsOptions =
@@ -32,3 +34,4 @@ export type ColorsOptions =
   | 'blue2'
   | 'lighthBlue'
   | 'darkBlue'
+  | 'pink'

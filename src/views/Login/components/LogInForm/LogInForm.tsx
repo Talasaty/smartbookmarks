@@ -1,16 +1,17 @@
 import * as React from 'react'
 import {
   LogInContainer,
-  LogInHeader,
-  LogInInputContainer,
-  LabelContainer,
-  ButtonLoginContainer,
-  ButtonSignInContainer,
-  ForgotYourPassword,
+  NextButtonContainer,
+  NextButton,
+  TextLogin,
+  SignInButtonContainer,
+  SignInButton,
+  TextSignIn,
+  HelpButtonContainer,
+  HelpButton,
+  TextHelp,
 } from './LogInForm.styles'
 
-import { Text } from '$components/Text'
-import { Button } from '$components/Button'
 import { Formik, Form } from 'formik'
 import { InputFiled } from 'src/formiksComponents/InputFiled/InputField'
 
@@ -26,60 +27,51 @@ export class LogInForm extends React.Component {
           }, 1000)
         }}
         render={() => (
-          <Form>
-            <LogInContainer>
-              <LogInHeader />
-              <LogInInputContainer>
-                <LabelContainer>
-                  <Text weight="medium" typeText="span">
-                    Usuario
-                  </Text>
-                </LabelContainer>
+          <>
+            <SignInButtonContainer>
+              <SignInButton>
+                <TextSignIn>Registrate</TextSignIn>
+              </SignInButton>
+            </SignInButtonContainer>
+            <Form>
+              <LogInContainer>
                 <InputFiled
+                  name="emailUser"
                   backgroundColor="white"
-                  borderColor="gray"
-                  color="text"
-                  typeInput="free"
-                  type="text"
-                  name="userName"
+                  paddingBottom="tiny"
+                  paddingRight="small"
+                  paddingLeft="small"
+                  paddingTop="tiny"
+                  fontSize="h3"
+                  type="email"
+                  placeholder="Usuario"
+                  color="darkGray"
                 />
-              </LogInInputContainer>
-              <LogInInputContainer>
-                <LabelContainer>
-                  <Text weight="medium" typeText="span">
-                    Contraseña
-                  </Text>
-                </LabelContainer>
                 <InputFiled
+                  name="passlUser"
                   backgroundColor="white"
-                  borderColor="gray"
-                  color="text"
-                  typeInput="free"
-                  type="text"
-                  name="password"
+                  paddingBottom="tiny"
+                  paddingRight="small"
+                  paddingLeft="small"
+                  paddingTop="tiny"
+                  fontSize="h3"
+                  type="password"
+                  placeholder="Contraseña"
+                  color="darkGray"
                 />
-                <ForgotYourPassword>
-                  <Text typeText="span" color="blue" size="h6">
-                    ¿Has olvidado la contraseña?
-                  </Text>
-                </ForgotYourPassword>
-              </LogInInputContainer>
-              <ButtonLoginContainer>
-                <Button backgroundColor="blue2">
-                  <Text weight="small" typeText="span" color="white">
-                    Login
-                  </Text>
-                </Button>
-              </ButtonLoginContainer>
-              <ButtonSignInContainer>
-                <Button type="big">
-                  <Text typeText="span" color="blue" size="h6">
-                    Registrate aquí
-                  </Text>
-                </Button>
-              </ButtonSignInContainer>
-            </LogInContainer>
-          </Form>
+              </LogInContainer>
+              <NextButtonContainer>
+                <NextButton>
+                  <TextLogin>Continuar</TextLogin>
+                </NextButton>
+              </NextButtonContainer>
+            </Form>
+            <HelpButtonContainer>
+              <HelpButton>
+                <TextHelp>Ayuda</TextHelp>
+              </HelpButton>
+            </HelpButtonContainer>
+          </>
         )}
       />
     )

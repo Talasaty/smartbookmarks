@@ -17,3 +17,12 @@ export const sizes: Sizes = {
   large: '40px',
   huge: '60px',
 }
+
+export type SizesOptions =
+  | 'xTiny'
+  | 'tiny'
+  | 'mini'
+  | 'small'
+  | 'base'
+  | 'large'
+  | 'huge'

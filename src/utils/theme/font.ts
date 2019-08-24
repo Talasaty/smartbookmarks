@@ -17,7 +17,7 @@ export interface FontWeight {
   bold: string
 }
 
-export const fontSize: FontSize = {
+export const fontSizes: FontSize = {
   h6: '11px',
   h5: '14px',
   h4: '17px',
