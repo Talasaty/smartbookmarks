@@ -1,5 +1,8 @@
 import * as React from 'react'
 import { styled } from '$utils/theme/themeStyledComponents'
+import { SizesOptions, sizes } from '$utils/theme/sizes'
+import { FontSizeOptions, fontSizes } from '$utils/theme/font'
+import { ColorsOptions, colors } from '$utils/theme/colors'
 
 const InputContainer = styled.div.attrs({})<Props>`
   display: flex;
@@ -7,18 +10,19 @@ const InputContainer = styled.div.attrs({})<Props>`
   justify-content: right;
   align-items: center;
 
-  height: ${p => p.theme.sizes.large};
   width: 100%;
   max-width: ${p => (p.typeInput === 'restricted' ? '450px' : '100%')};
 
-  border-radius: ${p => p.theme.sizes.tiny};
-  border: 1px solid
-    ${p =>
-      p.borderColor === 'white'
-        ? p.theme.colors.white
-        : p.borderColor === 'blue'
-        ? p.theme.colors.blue2
-        : p.theme.colors.ligthGray};
+  margin: 5px 0;
+
+  border-radius: ${p => p.border && p.theme.sizes.tiny};
+  border: ${p =>
+    p.border &&
+    `1px solid ${p.color ? colors[p.color] : p.theme.colors.ligthGray}`};
+
+  border-bottom: ${p =>
+    !p.border &&
+    `1px solid $${p.color ? colors[p.color] : p.theme.colors.ligthGray}`};
 
   background-color: ${p =>
     p.backgroundColor === 'white'
@@ -34,8 +38,6 @@ const InputContainer = styled.div.attrs({})<Props>`
   }
 `
 const InputStyled = styled.input.attrs({})<Props>`
-  float: center;
-
   width: 100%;
 
   background-color: ${p =>
@@ -45,21 +47,27 @@ const InputStyled = styled.input.attrs({})<Props>`
       ? p.theme.colors.blue2
       : p.theme.colors.ligthGray};
 
-  text-align: right;
+  font-family: 'Roboco';
 
   margin: 0 ${p => p.theme.sizes.xTiny};
 
-  font-size: 1.2em;
-  color: ${p =>
-    p.color === 'text'
-      ? p.theme.colors.text
-      : p.color === 'white'
-      ? p.theme.colors.white
-      : p.theme.colors.ligthGray};
+  padding-top: ${p => p.paddingTop && sizes[p.paddingTop]};
+  padding-bottom: ${p => p.paddingBottom && sizes[p.paddingBottom]};
+  padding-left: ${p => p.paddingLeft && sizes[p.paddingLeft]};
+  padding-right: ${p => p.paddingRight && sizes[p.paddingRight]};
+
+  font-size: ${p =>
+    p.fontSize ? fontSizes[p.fontSize] : p.theme.fontSizes.h3};
+
+  color: ${p => (p.color ? colors[p.color] : p.theme.colors.text)};
 
   border: none;
 
   outline: none;
+
+  ::placeholder {
+    color: ${p => p.theme.colors.ligthGray};
+  }
 `
 
 const RightIcon = styled.img.attrs({})<Props>`
@@ -91,20 +99,22 @@ const LeftIcon = styled.img.attrs({})<Props>`
   max-width: ${p => p.theme.sizes.small};
 
   background-color: ${p =>
-    p.backgroundColor === 'white'
-      ? p.theme.colors.white
-      : p.backgroundColor === 'blue'
-      ? p.theme.colors.blue2
-      : p.theme.colors.ligthGray};
+    p.color ? colors[p.color] : p.theme.colors.ligthGray};
 `
 
 interface Props {
   iconLeft?: string
   iconRight?: string
-  backgroundColor?: 'blue' | 'white' | 'gray'
-  borderColor?: 'blue' | 'white' | 'gray'
-  color?: 'text' | 'white' | 'gray'
+  backgroundColor?: ColorsOptions
+  borderColor?: ColorsOptions
+  border?: boolean
+  color?: ColorsOptions
   typeInput?: 'free' | 'restricted'
+  paddingTop?: SizesOptions
+  paddingBottom?: SizesOptions
+  paddingLeft?: SizesOptions
+  paddingRight?: SizesOptions
+  fontSize?: FontSizeOptions
 }
 
 export const Input: React.SFC<Props> = ({
@@ -113,17 +123,29 @@ export const Input: React.SFC<Props> = ({
   backgroundColor,
   borderColor,
   color,
+  border,
   typeInput,
+  paddingTop,
+  paddingBottom,
+  paddingLeft,
+  paddingRight,
+  fontSize,
   ...props
 }) => (
   <InputContainer
     backgroundColor={backgroundColor}
     borderColor={borderColor}
+    border={border}
     typeInput={typeInput}
   >
     {iconLeft && <LeftIcon src={iconLeft} backgroundColor={backgroundColor} />}
     <InputStyled
       backgroundColor={backgroundColor}
+      paddingBottom={paddingBottom}
+      paddingLeft={paddingLeft}
+      paddingRight={paddingRight}
+      paddingTop={paddingTop}
+      fontSize={fontSize}
       color={color ? color : 'text'}
       {...props}
     />

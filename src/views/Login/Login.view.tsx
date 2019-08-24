@@ -1,9 +1,12 @@
 import * as React from 'react'
+
+import { LoginContainer, LoginFormContainer } from './Login.styles'
 import { LogInForm } from './components'
-import { LoginContainer } from './Login.styles'
 
 export const Login: React.SFC = () => (
   <LoginContainer>
-    <LogInForm />
+    <LoginFormContainer>
+      <LogInForm />
+    </LoginFormContainer>
   </LoginContainer>
 )

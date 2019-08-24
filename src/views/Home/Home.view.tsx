@@ -47,7 +47,7 @@ export class Home extends React.Component<State> {
                 iconRight={search}
                 backgroundColor="blue"
                 borderColor="blue"
-                color="gray"
+                color="ligthGray"
                 typeInput="restricted"
                 type="text"
                 name="browser"
