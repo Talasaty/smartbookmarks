@@ -1,1 +1,0 @@
-export { AsideHome } from './AsideHome'

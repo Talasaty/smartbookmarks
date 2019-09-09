@@ -14,22 +14,21 @@ import {
 
 import { Formik, Form } from 'formik'
 import { InputFiled } from 'src/formiksComponents/InputFiled/InputField'
+import { withRouter, withRouterProps } from 'react-router-dom'
 
-export class LogInForm extends React.Component {
+class LogInFormRaw extends React.Component<withRouterProps> {
   render() {
     return (
       <Formik
         initialValues={{ userName: '', password: '' }}
-        onSubmit={(values, actions) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            actions.setSubmitting(false)
-          }, 1000)
+        onSubmit={() => {
+          // TODO quitar esto cuando se securice la web
+          this.props.history.push('/home')
         }}
         render={() => (
           <>
             <SignInButtonContainer>
-              <SignInButton>
+              <SignInButton onClick={() => this.props.history.push('/signin')}>
                 <TextSignIn>Registrate</TextSignIn>
               </SignInButton>
             </SignInButtonContainer>
@@ -67,7 +66,7 @@ export class LogInForm extends React.Component {
               </NextButtonContainer>
             </Form>
             <HelpButtonContainer>
-              <HelpButton>
+              <HelpButton onClick={() => this.props.history.push('/help')}>
                 <TextHelp>Ayuda</TextHelp>
               </HelpButton>
             </HelpButtonContainer>
@@ -77,3 +76,5 @@ export class LogInForm extends React.Component {
     )
   }
 }
+
+export const LogInForm = withRouter(LogInFormRaw)
