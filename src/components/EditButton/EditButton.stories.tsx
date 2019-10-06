@@ -1,4 +1,4 @@
-import * as React from 'react'
+/* import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { EditButton } from './EditButton'
 import { ThemeProvider } from '../../utils/theme/ThemeProvider'
@@ -17,4 +17,4 @@ storiesOf('EditButton', module)
       <EditButton type="none" />
       pasa el ratón por la esquina superior izquierda
     </Card>
-  ))
+  )) */

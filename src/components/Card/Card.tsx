@@ -2,34 +2,64 @@ import * as React from 'react'
 
 import { styled } from '$utils/theme/themeStyledComponents'
 
+interface PropsStyled {
+  isInside: boolean
+}
+
 const CardContainer = styled.div`
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  width: 180px;
-  height: 220px;
+  height: ${p => p.theme.sizes.large};
+  width: ${p => p.theme.sizes.large};
 
   margin: ${p => p.theme.sizes.tiny};
-  padding: 5px;
-
-  background-color: ${p => p.theme.colors.white};
-
-  border-radius: ${p => p.theme.sizes.tiny};
-
-  box-shadow: 0 10px ${p => p.theme.sizes.small} rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
 
   @media only screen and (max-width: 769px) {
-    width: 100%;
-    height: 220px;
-    border-radius: 0;
+    height: ${p => p.theme.sizes.large};
+    width: ${p => p.theme.sizes.large};
   }
 `
+const ImgCard = styled.img`
+  height: ${p => p.theme.sizes.large};
+  width: ${p => p.theme.sizes.large};
+
+  @media only screen and (max-width: 769px) {
+    height: ${p => p.theme.sizes.large};
+    width: ${p => p.theme.sizes.large};
+  }
+`
+
+const Description = styled.div<PropsStyled>`
+  display: ${p => (p.isInside ? 'block' : 'none')};
+  position: absolute;
+  float: left;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+`
+
 interface Props {
-  children?: React.ReactNode
+  img: string
 }
-export const Card: React.SFC<Props> = ({ children }) => (
-  <CardContainer>{children}</CardContainer>
-)
+
+export class Card extends React.Component<Props> {
+  state = {
+    isInside: false,
+  }
+
+  activeIsInside = () => this.setState({ isInside: true })
+  deactiveIsInside = () => this.setState({ isInside: false })
+
+  render() {
+    const { img } = this.props
+    const { isInside } = this.state
+    return (
+      <CardContainer
+        onMouseEnter={() => this.activeIsInside()}
+        onMouseOut={() => this.deactiveIsInside()}
+      >
+        <ImgCard src={img} />
+        <Description isInside={isInside} />
+      </CardContainer>
+    )
+  }
+}

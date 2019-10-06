@@ -11,3 +11,10 @@ export const BodyHomeAside = styled.div`
   width: 20%;
   margin: ${p => p.theme.sizes.small} 0;
 `
+
+export const BodyHomeSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: ${p => p.theme.sizes.small} 0;
+`
