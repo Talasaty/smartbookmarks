@@ -8,5 +8,6 @@ export const BodyHomeContainer = styled.div`
 `
 
 export const BodyHomeAside = styled.div`
-  width: 25%;
+  width: 20%;
+  margin: ${p => p.theme.sizes.small} 0;
 `

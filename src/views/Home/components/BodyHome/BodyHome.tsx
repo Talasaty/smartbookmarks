@@ -7,33 +7,15 @@ export class BodyHome extends React.Component {
     return (
       <BodyHomeContainer>
         <BodyHomeAside>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
-          <Category color="white" name="name">
-            Ejemplo de categoria
-          </Category>
+          <Category isMain color="white" name="BookMarks" />
+
+          <Category color="white" name="Categoria 1" />
+          <Category color="white" name="Categoria 2" />
+          <Category color="white" name="Categoria 3" />
+          <Category color="white" name="Categoria 4" />
+          <Category color="white" name="Categoria 5" />
+          <Category color="white" name="Categoria 6" />
+          <Category color="white" name="Categoria 7" />
         </BodyHomeAside>
       </BodyHomeContainer>
     )
