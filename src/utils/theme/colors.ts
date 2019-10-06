@@ -9,6 +9,7 @@ export interface Colors {
   lighthBlue: string
   darkBlue: string
   pink: string
+  transparent: string
 }
 
 export const colors: Colors = {
@@ -22,6 +23,7 @@ export const colors: Colors = {
   lighthBlue: '#D5DCFA',
   darkBlue: '#0031CA',
   pink: '#FC49D2',
+  transparent: 'transparent',
 }
 
 export type ColorsOptions =
@@ -35,3 +37,4 @@ export type ColorsOptions =
   | 'lighthBlue'
   | 'darkBlue'
   | 'pink'
+  | 'transparent'

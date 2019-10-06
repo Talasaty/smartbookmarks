@@ -1,23 +1,25 @@
 import * as React from 'react'
 import { Canvas } from './Home.styles'
+import { HeaderHome } from './components/Header'
+import { BodyHome } from './components/BodyHome'
 
 interface State {
   counterBackgroundId: number
 }
 export class Home extends React.Component<State> {
   state = {
-    counterBackgroundId: 1,
+    counterBackgroundId: 3,
   }
 
   render() {
     const imgUrl = require(`../../imgs/landscape_pic/${this.state
       .counterBackgroundId++}.jpg`)
 
-    console.log(this.state.counterBackgroundId)
     return (
       <>
         <Canvas backgroundId={imgUrl}>
-          Home
+          <HeaderHome />
+          <BodyHome />
           <button
             onClick={() => {
               this.setState({

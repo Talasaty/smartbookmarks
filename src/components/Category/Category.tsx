@@ -4,9 +4,11 @@ import launch from '$icons/launch.svg'
 import { EditButton } from '$components/EditButton'
 import { Text } from '$components/Text'
 import { styled } from '$utils/theme/themeStyledComponents'
+import { colors } from '$utils/theme/colors'
 
 interface PropsStyle {
   arrowDown: boolean
+  color?: string
 }
 
 const CategoryContainer = styled.div.attrs({})`
@@ -23,6 +25,8 @@ const CategoryContainer = styled.div.attrs({})`
   margin: ${p => p.theme.sizes.tiny};
 
   opacity: 0.6;
+
+  color: ${p => (p.color ? colors[p.color] : p.theme.colors.text)};
 
   :hover {
     opacity: 0.8;
@@ -80,6 +84,7 @@ const OpenCategory = styled.img`
 
 interface Props {
   name: string
+  color?: string
 }
 
 export class Category extends React.Component<Props> {
@@ -96,7 +101,7 @@ export class Category extends React.Component<Props> {
     this.setState({ isOver: !this.state.isOver })
   }
   render() {
-    const { name } = this.props
+    const { name, color } = this.props
     const { categoryWasClicked, isOver } = this.state
     return (
       <CategoryContainer
@@ -105,6 +110,7 @@ export class Category extends React.Component<Props> {
       >
         <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
         <ArrowCategory
+          color={color}
           src={arrowRigth}
           arrowDown={categoryWasClicked}
           onClick={() => this.changeOrientationArrow()}

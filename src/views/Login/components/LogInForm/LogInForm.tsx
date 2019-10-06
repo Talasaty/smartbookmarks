@@ -20,9 +20,10 @@ class LogInFormRaw extends React.Component<withRouterProps> {
   render() {
     return (
       <Formik
-        initialValues={{ userName: '', password: '' }}
-        onSubmit={() => {
+        initialValues={{ emailUser: '', passUser: '' }}
+        onSubmit={values => {
           // TODO quitar esto cuando se securice la web
+          console.log(values.passUser)
           this.props.history.push('/home')
         }}
         render={() => (
@@ -47,7 +48,7 @@ class LogInFormRaw extends React.Component<withRouterProps> {
                   color="darkGray"
                 />
                 <InputFiled
-                  name="passlUser"
+                  name="passUser"
                   backgroundColor="white"
                   paddingBottom="tiny"
                   paddingRight="small"

@@ -20,16 +20,8 @@ const InputContainer = styled.div.attrs({})<Props>`
     p.border &&
     `1px solid ${p.color ? colors[p.color] : p.theme.colors.ligthGray}`};
 
-  border-bottom: ${p =>
-    !p.border &&
-    `1px solid $${p.color ? colors[p.color] : p.theme.colors.ligthGray}`};
-
   background-color: ${p =>
-    p.backgroundColor === 'white'
-      ? p.theme.colors.white
-      : p.backgroundColor === 'blue'
-      ? p.theme.colors.blue2
-      : p.theme.colors.ligthGray};
+    p.backgroundColor ? colors[p.backgroundColor] : p.theme.colors.ligthGray};
 
   @media only screen and (max-width: 769px) {
     margin-left: 0;
@@ -41,11 +33,7 @@ const InputStyled = styled.input.attrs({})<Props>`
   width: 100%;
 
   background-color: ${p =>
-    p.backgroundColor === 'white'
-      ? p.theme.colors.white
-      : p.backgroundColor === 'blue'
-      ? p.theme.colors.blue2
-      : p.theme.colors.ligthGray};
+    p.backgroundColor ? colors[p.backgroundColor] : p.theme.colors.ligthGray};
 
   font-family: 'Roboco';
 
@@ -81,11 +69,7 @@ const RightIcon = styled.img.attrs({})<Props>`
   max-width: ${p => p.theme.sizes.small};
 
   background-color: ${p =>
-    p.backgroundColor === 'white'
-      ? p.theme.colors.white
-      : p.backgroundColor === 'blue'
-      ? p.theme.colors.blue2
-      : p.theme.colors.ligthGray};
+    p.backgroundColor ? colors[p.backgroundColor] : p.theme.colors.ligthGray};
 `
 
 const LeftIcon = styled.img.attrs({})<Props>`
