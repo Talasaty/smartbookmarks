@@ -1,5 +1,6 @@
 import * as React from 'react'
 import edit from '$icons/edit.svg'
+import editDark from '$icons/editDark.svg'
 import { styled } from '$utils/theme/themeStyledComponents'
 import { colors, ColorsOptions } from '$utils/theme/colors'
 
@@ -7,6 +8,7 @@ interface Props {
   isOver?: boolean
   backgroundColor?: ColorsOptions
   type?: 'round' | 'none'
+  color?: 'white' | 'dark'
 }
 
 const EditButtonStyle = styled.button.attrs({})<Props>`
@@ -58,12 +60,13 @@ export const EditButton: React.SFC<Props> = ({
   isOver,
   backgroundColor,
   type,
+  color,
 }) => (
   <EditButtonStyle
     backgroundColor={backgroundColor}
     isOver={isOver}
     type={type}
   >
-    <img src={edit} />
+    <img src={color === 'dark' ? editDark : edit} />
   </EditButtonStyle>
 )

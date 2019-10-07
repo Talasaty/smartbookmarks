@@ -1,4 +1,5 @@
 export interface Sizes {
+  null: string
   xTiny: string
   tiny: string
   mini: string
@@ -9,6 +10,7 @@ export interface Sizes {
 }
 
 export const sizes: Sizes = {
+  null: '0px',
   xTiny: '5px',
   tiny: '10px',
   mini: '15px',
@@ -19,6 +21,7 @@ export const sizes: Sizes = {
 }
 
 export type SizesOptions =
+  | 'null'
   | 'xTiny'
   | 'tiny'
   | 'mini'
