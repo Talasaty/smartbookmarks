@@ -63,7 +63,7 @@ export class Category extends React.Component<Props> {
     this.setState({ isOver: !this.state.isOver })
   }
   render() {
-    const { name, color, isMain } = this.props
+    const { name, color, isMain = false } = this.props
     const { isOver } = this.state
 
     if (!isMain) {
