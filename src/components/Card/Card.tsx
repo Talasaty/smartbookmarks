@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import { useState } from 'react'
 import { styled } from '$utils/theme/themeStyledComponents'
 import { Text } from '$components/Text'
 import { EditButton } from '$components/EditButton'
@@ -63,44 +63,30 @@ const BodyDescription = styled.div`
   padding: ${p => p.theme.sizes.xTiny};
 `
 
-interface Props {
-  img: string
-}
-
-export class Card extends React.Component<Props> {
-  state = {
-    isInside: false,
-  }
-
-  activeIsInside = () => this.setState({ isInside: true })
-  deactiveIsInside = () => this.setState({ isInside: false })
-
-  render() {
-    const { img } = this.props
-    const { isInside } = this.state
-    return (
-      <CardContainer
-        onMouseEnter={() => this.activeIsInside()}
-        onMouseLeave={() => this.deactiveIsInside()}
-      >
-        <ImgCard src={img} />
-        <Description isInside={isInside}>
-          <HeaderDescriptionWrapper>
-            <HeaderDescriptionText>
-              <Text typeText="p" size="h4">
-                Texto h3
-              </Text>
-            </HeaderDescriptionText>
-            <EditButton color="dark" isOver={true} />
-          </HeaderDescriptionWrapper>
-          <BodyDescription>
-            <Text typeText="span" size="h5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-              molestias aliquid! Facere corporis quidem.
+export const Card = ({ img }) => {
+  const [isInside, setIsInside] = useState(false)
+  return (
+    <CardContainer
+      onMouseEnter={() => setIsInside(true)}
+      onMouseLeave={() => setIsInside(false)}
+    >
+      <ImgCard src={img} />
+      <Description isInside={isInside}>
+        <HeaderDescriptionWrapper>
+          <HeaderDescriptionText>
+            <Text typeText="p" size="h4">
+              Texto h3
             </Text>
-          </BodyDescription>
-        </Description>
-      </CardContainer>
-    )
-  }
+          </HeaderDescriptionText>
+          <EditButton color="dark" isOver={true} />
+        </HeaderDescriptionWrapper>
+        <BodyDescription>
+          <Text typeText="span" size="h5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            molestias aliquid! Facere corporis quidem.
+          </Text>
+        </BodyDescription>
+      </Description>
+    </CardContainer>
+  )
 }
