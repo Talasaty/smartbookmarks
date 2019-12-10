@@ -46,7 +46,7 @@ interface Props {
   type?: typeOptions
   onClick?: () => void
 }
-export const Button: React.SFC<Props> = ({
+export const Button: React.FC<Props> = ({
   children,
   backgroundColor,
   borderColor,

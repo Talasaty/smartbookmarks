@@ -101,7 +101,7 @@ interface Props {
   fontSize?: FontSizeOptions
 }
 
-export const Input: React.SFC<Props> = ({
+export const Input: React.FC<Props> = ({
   iconLeft,
   iconRight,
   backgroundColor,

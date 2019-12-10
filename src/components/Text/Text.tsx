@@ -52,7 +52,7 @@ interface Props {
   marginRight?: SizesOptions
 }
 
-export const Text: React.SFC<Props> = ({
+export const Text: React.FC<Props> = ({
   color,
   size,
   weight,

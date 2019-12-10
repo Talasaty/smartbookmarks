@@ -56,7 +56,7 @@ const EditButtonStyle = styled.button.attrs({})<Props>`
   }
 `
 
-export const EditButton: React.SFC<Props> = ({
+export const EditButton: React.FC<Props> = ({
   isOver,
   backgroundColor,
   type,

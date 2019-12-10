@@ -4,6 +4,6 @@ import { PreviewContainer } from './Preview.style'
 interface Props {
   img: string
 }
-export const Preview: React.SFC<Props> = ({ img }) => (
+export const Preview: React.FC<Props> = ({ img }) => (
   <PreviewContainer src={img} />
 )
