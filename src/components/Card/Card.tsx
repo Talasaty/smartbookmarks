@@ -62,8 +62,11 @@ const BodyDescription = styled.div`
   margin: ${p => p.theme.sizes.xTiny};
   padding: ${p => p.theme.sizes.xTiny};
 `
+interface Props {
+  img: string
+}
 
-export const Card = ({ img }) => {
+export const Card: React.FC<Props> = ({ img }) => {
   const [isInside, setIsInside] = useState(false)
   return (
     <CardContainer

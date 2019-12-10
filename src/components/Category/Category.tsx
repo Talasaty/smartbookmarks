@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useState } from 'react'
 import launch from '$icons/launch.svg'
 import { EditButton } from '$components/EditButton'
 import { Text } from '$components/Text'
@@ -53,48 +54,37 @@ interface Props {
   isMain?: boolean
 }
 
-export class Category extends React.Component<Props> {
-  state = {
-    categoryWasClicked: false,
-    isOver: false,
-  }
+export const Category: React.FC<Props> = ({ isMain, color, name }) => {
+  const [isOver, setIsOver] = useState(false)
 
-  setOverState = () => {
-    this.setState({ isOver: !this.state.isOver })
-  }
-  render() {
-    const { name, color, isMain = false } = this.props
-    const { isOver } = this.state
-
-    if (!isMain) {
-      return (
-        <CategoryContainer
-          onMouseOver={this.setOverState}
-          onMouseOut={this.setOverState}
-          color={color}
-          isMain={isMain}
-        >
-          <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
-          <Text typeText="span" color={color} size="h3">
-            {name.substr(0, 22)}
-          </Text>
-          <EditButton isOver={isOver} />
-        </CategoryContainer>
-      )
-    } else {
-      return (
-        <CategoryContainer
-          onMouseOver={this.setOverState}
-          onMouseOut={this.setOverState}
-          color={color}
-          isMain={isMain}
-        >
-          <Text typeText="span" color={color} size="h3">
-            {name.substr(0, 22)}
-          </Text>
-          <EditButton isOver={isOver} />
-        </CategoryContainer>
-      )
-    }
+  if (!isMain) {
+    return (
+      <CategoryContainer
+        onMouseOver={() => setIsOver(!isOver)}
+        onMouseOut={() => setIsOver(!isOver)}
+        color={color}
+        isMain={isMain}
+      >
+        <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
+        <Text typeText="span" color={color} size="h3">
+          {name.substr(0, 22)}
+        </Text>
+        <EditButton isOver={isOver} />
+      </CategoryContainer>
+    )
+  } else {
+    return (
+      <CategoryContainer
+        onMouseOver={() => setIsOver(!isOver)}
+        onMouseOut={() => setIsOver(!isOver)}
+        color={color}
+        isMain={isMain}
+      >
+        <Text typeText="span" color={color} size="h3">
+          {name.substr(0, 22)}
+        </Text>
+        <EditButton isOver={isOver} />
+      </CategoryContainer>
+    )
   }
 }
