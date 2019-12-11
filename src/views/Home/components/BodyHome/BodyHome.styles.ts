@@ -7,14 +7,15 @@ export const BodyHomeContainer = styled.div`
 `
 
 export const BodyHomeAside = styled.div`
-  width: 20%;
+  width: 15%;
   margin: ${p => p.theme.sizes.small} 0;
   min-width: 200px;
 `
 
 export const BodyHomeSection = styled.div`
-  width: 65%;
-  margin: ${p => p.theme.sizes.small} 0;
+  width: 70%;
+  margin: ${p => p.theme.sizes.small} ${p => p.theme.sizes.tiny}
+    ${p => p.theme.sizes.small} 0;
   z-index: 5;
 `
 export const BodyHomeSettings = styled.div`

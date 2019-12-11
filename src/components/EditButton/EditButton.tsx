@@ -7,7 +7,7 @@ import { colors, ColorsOptions } from '$utils/theme/colors'
 interface Props {
   isOver?: boolean
   backgroundColor?: ColorsOptions
-  type?: 'round' | 'none'
+  typeEditButton?: 'round' | 'none'
   color?: 'white' | 'dark'
 }
 
@@ -31,16 +31,14 @@ const EditButtonStyle = styled.button.attrs({})<Props>`
   border: 1px solid
     ${p => (p.backgroundColor ? colors[p.backgroundColor] : 'transparent')};
 
-  border-radius: ${p => (p.type === 'round' ? '50%' : '0')};
+  border-radius: ${p => (p.typeEditButton === 'round' ? '50%' : '0')};
 
   background-color: ${p =>
     p.backgroundColor ? colors[p.backgroundColor] : 'transparent'};
 
   box-shadow: ${p =>
-    p.type === 'round'
-      ? `0 ${p.theme.sizes.tiny} ${
-          p.theme.sizes.small
-        } rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)`
+    p.typeEditButton === 'round'
+      ? `0 ${p.theme.sizes.tiny} ${p.theme.sizes.small} rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)`
       : 'none'};
 
   outline: none;
@@ -59,13 +57,13 @@ const EditButtonStyle = styled.button.attrs({})<Props>`
 export const EditButton: React.FC<Props> = ({
   isOver,
   backgroundColor,
-  type,
+  typeEditButton,
   color,
 }) => (
   <EditButtonStyle
     backgroundColor={backgroundColor}
     isOver={isOver}
-    type={type}
+    typeEditButton={typeEditButton}
   >
     <img src={color === 'dark' ? editDark : edit} />
   </EditButtonStyle>

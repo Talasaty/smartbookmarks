@@ -20,7 +20,7 @@ const sizesButon: SizesButon = {
 type typeOptions = 'tiny' | 'normal' | 'big' | 'free'
 
 const ButtonStyle = styled.button.attrs({})<Props>`
-  min-width: ${p => (p.type ? sizesButon[p.type] : '')};
+  min-width: ${p => (p.typeButton ? sizesButon[p.typeButton] : '')};
 
   margin: 5px;
   padding: ${p => p.theme.sizes.xTiny} ${p => p.theme.sizes.tiny};
@@ -43,20 +43,20 @@ interface Props {
   children?: React.ReactNode
   backgroundColor?: ColorsOptions
   borderColor?: ColorsOptions
-  type?: typeOptions
+  typeButton?: typeOptions
   onClick?: () => void
 }
 export const Button: React.FC<Props> = ({
   children,
   backgroundColor,
   borderColor,
-  type,
+  typeButton,
   onClick,
 }) => (
   <ButtonStyle
     backgroundColor={backgroundColor}
     borderColor={borderColor}
-    type={type}
+    typeButton={typeButton}
     onClick={onClick}
   >
     {children}

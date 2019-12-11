@@ -74,16 +74,10 @@ export const Category: React.FC<Props> = ({ isMain, color, name }) => {
     )
   } else {
     return (
-      <CategoryContainer
-        onMouseOver={() => setIsOver(!isOver)}
-        onMouseOut={() => setIsOver(!isOver)}
-        color={color}
-        isMain={isMain}
-      >
+      <CategoryContainer color={color} isMain={isMain}>
         <Text typeText="span" color={color} size="h3">
           {name.substr(0, 22)}
         </Text>
-        <EditButton isOver={isOver} />
       </CategoryContainer>
     )
   }

@@ -7,7 +7,7 @@ storiesOf('Button', module)
   .addDecorator(story => <ThemeProvider>{story()}</ThemeProvider>)
   .add('normal', () => (
     <Button
-      type="normal"
+      typeButton="normal"
       backgroundColor="blue"
       borderColor="blue"
       onClick={() => alert('Botón normal')}
@@ -17,7 +17,7 @@ storiesOf('Button', module)
   ))
   .add('tiny', () => (
     <Button
-      type="tiny"
+      typeButton="tiny"
       backgroundColor="blue2"
       borderColor="black"
       onClick={() => alert('Botón tiny')}
@@ -27,7 +27,7 @@ storiesOf('Button', module)
   ))
   .add('big', () => (
     <Button
-      type="big"
+      typeButton="big"
       backgroundColor="darkGray"
       borderColor="ligthGray"
       onClick={() => alert('Botón big')}
@@ -37,7 +37,7 @@ storiesOf('Button', module)
   ))
   .add('free', () => (
     <Button
-      type="free"
+      typeButton="free"
       backgroundColor="white"
       borderColor="text"
       onClick={() => alert('Botón free')}

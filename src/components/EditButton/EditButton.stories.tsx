@@ -7,13 +7,13 @@ storiesOf('EditButton', module)
   .addDecorator(story => <ThemeProvider>{story()}</ThemeProvider>)
   .add('round', () => (
     <div>
-      <EditButton type="round" />
+      <EditButton typeEditButton="round" />
       pasa el ratón por la esquina superior izquierda
     </div>
   ))
   .add('dark', () => (
     <div>
-      <EditButton color="dark" type="round" />
+      <EditButton color="dark" typeEditButton="round" />
       pasa el ratón por la esquina superior izquierda
     </div>
   ))

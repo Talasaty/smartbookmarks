@@ -7,14 +7,13 @@ import {
 } from './BodyHome.styles'
 import { Category } from '$components/Category'
 import { Card } from '$components/Card/Card'
-
+import Grid from '@material-ui/core/Grid'
 export class BodyHome extends React.Component {
   render() {
     return (
       <BodyHomeContainer>
         <BodyHomeAside>
           <Category isMain color="white" name="BookMarks" />
-
           <Category color="white" name="Categoria 1" />
           <Category color="white" name="Categoria 2" />
           <Category color="white" name="Categoria 3" />
@@ -24,30 +23,68 @@ export class BodyHome extends React.Component {
           <Category color="white" name="Categoria 7" />
         </BodyHomeAside>
         <BodyHomeSection>
-          <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
-          <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
-          <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" />
-          <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
-          <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
-          <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" />
-          <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
-          <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
-          <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" />
-          <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
-          <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
-          <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" />
-          <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
-          <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
-          <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
-          <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
+          <Grid container spacing={3}>
+            <Grid item xs={1} sm={1}>
+              <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="http://www.vectorico.com/download/social_media/Reddit-Icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
+            </Grid>
+            <Grid item xs={1}>
+              <Card img="https://image.flaticon.com/icons/png/512/33/33949.png" />
+            </Grid>
+          </Grid>
         </BodyHomeSection>
         <BodyHomeSettings />
       </BodyHomeContainer>
