@@ -4,11 +4,18 @@ import {
   BodyHomeAside,
   BodyHomeSection,
   BodyHomeSettings,
+  NextBGContainer,
 } from './BodyHome.styles'
 import { Category } from '$components/Category'
 import { Card } from '$components/Card/Card'
 import Grid from '@material-ui/core/Grid'
-export class BodyHome extends React.Component {
+import { Button } from '$components/Button'
+import { Text } from '$components/Text'
+
+interface Props {
+  loadNextBackGround: () => void
+}
+export class BodyHome extends React.Component<Props> {
   render() {
     return (
       <BodyHomeContainer>
@@ -87,6 +94,20 @@ export class BodyHome extends React.Component {
           </Grid>
         </BodyHomeSection>
         <BodyHomeSettings>
+          <NextBGContainer>
+            <Button
+              typeButton="big"
+              backgroundColor="transparent"
+              borderColor="transparent"
+              onClick={() => {
+                this.props.loadNextBackGround()
+              }}
+            >
+              <Text typeText="span" color="white" size="h4" center="center">
+                Next BG >>
+              </Text>
+            </Button>
+          </NextBGContainer>
           <Category isMain color="white" name="WorkSpace" />
           <Category color="white" name="Sesión de 1" />
           <Category color="white" name="Sesión 2" />

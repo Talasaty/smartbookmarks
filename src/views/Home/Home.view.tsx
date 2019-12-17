@@ -11,6 +11,15 @@ export class Home extends React.Component<State> {
     counterBackgroundId: 3,
   }
 
+  private loadNextBackGround = () => {
+    this.setState({
+      counterBackgroundId:
+        this.state.counterBackgroundId !== 9
+          ? this.state.counterBackgroundId++
+          : 1,
+    })
+  }
+
   render() {
     const imgUrl = require(`../../imgs/landscape_pic/${this.state
       .counterBackgroundId++}.jpg`)
@@ -19,19 +28,7 @@ export class Home extends React.Component<State> {
       <>
         <Canvas backgroundId={imgUrl}>
           <HeaderHome />
-          <BodyHome />
-          <button
-            onClick={() => {
-              this.setState({
-                counterBackgroundId:
-                  this.state.counterBackgroundId !== 9
-                    ? this.state.counterBackgroundId++
-                    : 1,
-              })
-            }}
-          >
-            next
-          </button>
+          <BodyHome loadNextBackGround={this.loadNextBackGround} />
         </Canvas>
       </>
     )

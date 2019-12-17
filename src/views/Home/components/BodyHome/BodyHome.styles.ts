@@ -23,3 +23,10 @@ export const BodyHomeSettings = styled.div`
   margin: ${p => p.theme.sizes.small} 0;
   min-width: 200px;
 `
+
+export const NextBGContainer = styled.div`
+  max-width: 15%;
+  position: absolute;
+  right: ${p => p.theme.sizes.huge};
+  top: ${p => p.theme.sizes.xTiny};
+`

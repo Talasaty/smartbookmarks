@@ -80,7 +80,7 @@ export const Category: React.FC<Props> = ({
             <EditButton isOver={isOver} />
             <TextContainer>
               <Text typeText="span" color={color} size="h3" center="left">
-                {name.substr(0, 22)}
+                {name.substr(0, 11)}
               </Text>
             </TextContainer>
             <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
@@ -91,7 +91,7 @@ export const Category: React.FC<Props> = ({
             <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
             <TextContainer>
               <Text typeText="span" color={color} size="h3">
-                {name.substr(0, 22)}
+                {name.substr(0, 11)}
               </Text>
             </TextContainer>
             <EditButton isOver={isOver} />
@@ -104,7 +104,7 @@ export const Category: React.FC<Props> = ({
       <CategoryContainer color={color} isMain={isMain}>
         <TextContainer>
           <Text typeText="span" color={color} size="h3" center="center">
-            {name.substr(0, 22)}
+            {name.substr(0, 11)}
           </Text>
         </TextContainer>
       </CategoryContainer>
