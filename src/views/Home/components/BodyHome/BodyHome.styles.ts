@@ -19,11 +19,7 @@ export const BodyHomeSection = styled.div`
   z-index: 5;
 `
 export const BodyHomeSettings = styled.div`
-  display: flex;
-
   width: 15%;
-  min-width: 150px;
   margin: ${p => p.theme.sizes.small} 0;
-  background-color: blue;
-  z-index: 0;
+  min-width: 200px;
 `

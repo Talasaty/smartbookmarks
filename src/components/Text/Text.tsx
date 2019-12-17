@@ -18,6 +18,7 @@ const TextContainer = styled.div<Props>`
   padding-bottom: ${p => sizes[p.paddingBottom]};
   padding-left: ${p => sizes[p.paddingLeft]};
   padding-right: ${p => sizes[p.paddingRight]};
+  text-align: ${p => p.center && p.center};
 `
 
 const P = styled.p.attrs({})<Props>`
@@ -50,6 +51,7 @@ interface Props {
   marginBottom?: SizesOptions
   marginLeft?: SizesOptions
   marginRight?: SizesOptions
+  center?: 'center' | 'left' | 'right' | 'justify'
 }
 
 export const Text: React.FC<Props> = ({
@@ -66,6 +68,7 @@ export const Text: React.FC<Props> = ({
   marginBottom,
   marginLeft,
   marginRight,
+  center,
 }) => {
   if (typeText === 'span') {
     return (
@@ -78,6 +81,7 @@ export const Text: React.FC<Props> = ({
         marginBottom={marginBottom}
         marginLeft={marginLeft}
         marginRight={marginRight}
+        center={center}
       >
         <Span color={color} size={size} weight={weight}>
           {children}
@@ -95,6 +99,7 @@ export const Text: React.FC<Props> = ({
       marginBottom={marginBottom}
       marginLeft={marginLeft}
       marginRight={marginRight}
+      center={center}
     >
       <P color={color} size={size} weight={weight}>
         {children}

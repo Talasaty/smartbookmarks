@@ -48,13 +48,23 @@ const OpenCategory = styled.img`
   }
 `
 
+const TextContainer = styled.div`
+  width: 115px;
+`
+
 interface Props {
   name: string
   color?: ColorsOptions
   isMain?: boolean
+  iconPosition?: 'right'
 }
 
-export const Category: React.FC<Props> = ({ isMain, color, name }) => {
+export const Category: React.FC<Props> = ({
+  isMain,
+  color,
+  name,
+  iconPosition,
+}) => {
   const [isOver, setIsOver] = useState(false)
 
   if (!isMain) {
@@ -65,19 +75,38 @@ export const Category: React.FC<Props> = ({ isMain, color, name }) => {
         color={color}
         isMain={isMain}
       >
-        <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
-        <Text typeText="span" color={color} size="h3">
-          {name.substr(0, 22)}
-        </Text>
-        <EditButton isOver={isOver} />
+        {iconPosition === 'right' && (
+          <>
+            <EditButton isOver={isOver} />
+            <TextContainer>
+              <Text typeText="span" color={color} size="h3" center="left">
+                {name.substr(0, 22)}
+              </Text>
+            </TextContainer>
+            <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
+          </>
+        )}
+        {!iconPosition && (
+          <>
+            <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
+            <TextContainer>
+              <Text typeText="span" color={color} size="h3">
+                {name.substr(0, 22)}
+              </Text>
+            </TextContainer>
+            <EditButton isOver={isOver} />
+          </>
+        )}
       </CategoryContainer>
     )
   } else {
     return (
       <CategoryContainer color={color} isMain={isMain}>
-        <Text typeText="span" color={color} size="h3">
-          {name.substr(0, 22)}
-        </Text>
+        <TextContainer>
+          <Text typeText="span" color={color} size="h3" center="center">
+            {name.substr(0, 22)}
+          </Text>
+        </TextContainer>
       </CategoryContainer>
     )
   }

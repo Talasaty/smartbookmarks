@@ -86,7 +86,16 @@ export class BodyHome extends React.Component {
             </Grid>
           </Grid>
         </BodyHomeSection>
-        <BodyHomeSettings />
+        <BodyHomeSettings>
+          <Category isMain color="white" name="WorkSpace" />
+          <Category color="white" name="Sesión de 1" />
+          <Category color="white" name="Sesión 2" />
+          <Category color="white" name="Sesión 3" />
+          <Category color="white" name="Categoria 4" />
+          <Category color="white" name="Sesión 5" />
+          <Category color="white" name="Sesión 6" />
+          <Category color="white" name="Sesión 7" />
+        </BodyHomeSettings>
       </BodyHomeContainer>
     )
   }
