@@ -17,6 +17,10 @@ export const SearchHomeContainer = styled.div`
   align-items: center;
   flex-direction: row;
   border-bottom: solid 1px ${p => p.theme.colors.white};
+  @media only screen and (max-width: 769px) {
+    width: 70%;
+    margin-top: ${p => p.theme.sizes.small};
+  }
 `
 
 export const ButtonSearchHome = styled.button`

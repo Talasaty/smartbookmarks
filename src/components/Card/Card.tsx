@@ -3,13 +3,13 @@ import { useState } from 'react'
 import { styled } from '$utils/theme/themeStyledComponents'
 import { Text } from '$components/Text'
 import { EditButton } from '$components/EditButton'
+import { Button } from '$components/Button'
 
 interface PropsStyled {
   isInside: boolean
 }
 
 const CardContainer = styled.div`
-  position: relative;
   height: ${p => p.theme.sizes.large};
   width: ${p => p.theme.sizes.large};
 
@@ -40,6 +40,13 @@ const Description = styled.div<PropsStyled>`
   background-color: white;
   border: solid 1px ${p => p.theme.colors.white};
   border-radius: 5px;
+
+  @media only screen and (max-width: 769px) {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
 `
 
 const HeaderDescriptionWrapper = styled.div`
@@ -62,6 +69,16 @@ const BodyDescription = styled.div`
   margin: ${p => p.theme.sizes.xTiny};
   padding: ${p => p.theme.sizes.xTiny};
 `
+
+const CloseButtonWrapper = styled.div`
+  display: none;
+  margin: 0;
+  padding: 0;
+  @media only screen and (max-width: 769px) {
+    display: block;
+  }
+`
+
 interface Props {
   img: string
 }
@@ -77,14 +94,23 @@ export const Card: React.FC<Props> = ({ img }) => {
       <Description isInside={isInside}>
         <HeaderDescriptionWrapper>
           <HeaderDescriptionText>
-            <Text typeText="p" size="h4">
+            <EditButton color="dark" isOver={true} />
+            <Text typeText="span" size="h4">
               Texto h3
             </Text>
           </HeaderDescriptionText>
-          <EditButton color="dark" isOver={true} />
+          <CloseButtonWrapper>
+            <Button
+              typeButton="tiny"
+              backgroundColor="transparent"
+              onClick={() => setIsInside(false)}
+            >
+              X
+            </Button>
+          </CloseButtonWrapper>
         </HeaderDescriptionWrapper>
         <BodyDescription>
-          <Text typeText="span" size="h5">
+          <Text marginLeft="small" typeText="span" size="h5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
             molestias aliquid! Facere corporis quidem.
           </Text>
