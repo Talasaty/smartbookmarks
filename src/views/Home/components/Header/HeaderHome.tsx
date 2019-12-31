@@ -6,7 +6,7 @@ import {
   IconSearchHome,
   IconSettingsHome,
   SettingsHomeContainer,
-  ButtonSettingsHome,
+  ButtonsOnlyMobile,
 } from './HeaderHome.styles'
 import { InputFiled } from 'src/formiksComponents/InputFiled/InputField'
 import { Formik, Form } from 'formik'
@@ -47,10 +47,38 @@ export class HeaderHome extends React.Component<Props> {
                     Next BG >>
                   </Text>
                 </Button>
-
-                <ButtonSettingsHome>
+                <ButtonsOnlyMobile>
+                  <Button
+                    typeButton="tiny"
+                    backgroundColor="transparent"
+                    borderColor="transparent"
+                    onClick={() => {
+                      this.props.loadNextBackGround()
+                    }}
+                  >
+                    Categorias
+                  </Button>
+                  <Button
+                    typeButton="tiny"
+                    backgroundColor="transparent"
+                    borderColor="transparent"
+                    onClick={() => {
+                      this.props.loadNextBackGround()
+                    }}
+                  >
+                    Sesiones
+                  </Button>
+                </ButtonsOnlyMobile>
+                <Button
+                  typeButton="tiny"
+                  backgroundColor="transparent"
+                  borderColor="transparent"
+                  onClick={() => {
+                    this.props.loadNextBackGround()
+                  }}
+                >
                   <IconSettingsHome src={Settings} />
-                </ButtonSettingsHome>
+                </Button>
               </SettingsHomeContainer>
               <SearchHomeContainer>
                 <InputFiled

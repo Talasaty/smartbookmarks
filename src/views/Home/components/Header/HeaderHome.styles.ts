@@ -34,10 +34,6 @@ export const ButtonSearchHome = styled.button`
   padding-right: ${p => p.theme.sizes.small};
 `
 
-export const ButtonSettingsHome = styled(ButtonSearchHome)`
-  padding-right: 0;
-`
-
 export const IconSearchHome = styled.img`
   height: ${p => p.theme.sizes.small};
 `
@@ -51,4 +47,11 @@ export const SettingsHomeContainer = styled.div`
 export const IconSettingsHome = styled.img`
   height: ${p => p.theme.sizes.small};
   margin: 0 ${p => p.theme.sizes.tiny};
+`
+
+export const ButtonsOnlyMobile = styled.div`
+  display: none;
+  @media only screen and (max-width: 769px) {
+    display: flex;
+  }
 `
