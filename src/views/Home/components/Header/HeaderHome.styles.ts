@@ -4,7 +4,7 @@ export const HeaderHomeWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   padding-top: ${p => p.theme.sizes.xTiny};
   margin-bottom: ${p => p.theme.sizes.small};
@@ -19,7 +19,7 @@ export const SearchHomeContainer = styled.div`
   border-bottom: solid 1px ${p => p.theme.colors.white};
   @media only screen and (max-width: 769px) {
     width: 80%;
-    margin-top: ${p => p.theme.sizes.large};
+    margin-top: ${p => p.theme.sizes.tiny};
   }
 `
 
@@ -42,11 +42,13 @@ export const IconSearchHome = styled.img`
   height: ${p => p.theme.sizes.small};
 `
 export const SettingsHomeContainer = styled.div`
-  position: absolute;
-  right: ${p => p.theme.sizes.small};
-  top: ${p => p.theme.sizes.tiny};
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
 `
 
 export const IconSettingsHome = styled.img`
   height: ${p => p.theme.sizes.small};
+  margin: 0 ${p => p.theme.sizes.tiny};
 `

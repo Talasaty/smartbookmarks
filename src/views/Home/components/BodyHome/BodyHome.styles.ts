@@ -35,10 +35,3 @@ export const BodyHomeSessions = styled.div`
     display: none;
   }
 `
-
-export const NextBGContainer = styled.div`
-  max-width: 15%;
-  position: absolute;
-  left: 0;
-  top: ${p => p.theme.sizes.xTiny};
-`

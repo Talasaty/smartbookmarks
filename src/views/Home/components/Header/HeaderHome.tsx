@@ -12,8 +12,14 @@ import { InputFiled } from 'src/formiksComponents/InputFiled/InputField'
 import { Formik, Form } from 'formik'
 import Search from '$icons/search.svg'
 import Settings from '$icons/settings.svg'
+import { Button } from '$components/Button'
+import { Text } from '$components/Text'
 
-export class HeaderHome extends React.Component {
+interface Props {
+  loadNextBackGround: () => void
+}
+
+export class HeaderHome extends React.Component<Props> {
   render() {
     return (
       <Formik
@@ -28,6 +34,24 @@ export class HeaderHome extends React.Component {
         render={() => (
           <Form>
             <HeaderHomeWrapper>
+              <SettingsHomeContainer>
+                <Button
+                  typeButton="tiny"
+                  backgroundColor="transparent"
+                  borderColor="transparent"
+                  onClick={() => {
+                    this.props.loadNextBackGround()
+                  }}
+                >
+                  <Text typeText="span" color="white" size="h4" center="center">
+                    Next BG >>
+                  </Text>
+                </Button>
+
+                <ButtonSettingsHome>
+                  <IconSettingsHome src={Settings} />
+                </ButtonSettingsHome>
+              </SettingsHomeContainer>
               <SearchHomeContainer>
                 <InputFiled
                   name="search"
@@ -43,11 +67,6 @@ export class HeaderHome extends React.Component {
                   <IconSearchHome src={Search} />
                 </ButtonSearchHome>
               </SearchHomeContainer>
-              <SettingsHomeContainer>
-                <ButtonSettingsHome>
-                  <IconSettingsHome src={Settings} />
-                </ButtonSettingsHome>
-              </SettingsHomeContainer>
             </HeaderHomeWrapper>
           </Form>
         )}

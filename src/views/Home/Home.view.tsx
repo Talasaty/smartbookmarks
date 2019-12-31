@@ -27,8 +27,8 @@ export class Home extends React.Component<State> {
     return (
       <>
         <Canvas backgroundId={imgUrl}>
-          <HeaderHome />
-          <BodyHome loadNextBackGround={this.loadNextBackGround} />
+          <HeaderHome loadNextBackGround={this.loadNextBackGround} />
+          <BodyHome />
         </Canvas>
       </>
     )
