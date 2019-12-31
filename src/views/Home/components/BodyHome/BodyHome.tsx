@@ -3,7 +3,7 @@ import {
   BodyHomeContainer,
   BodyHomeAside,
   BodyHomeSection,
-  BodyHomeSettings,
+  BodyHomeSessions,
   NextBGContainer,
 } from './BodyHome.styles'
 import { Category } from '$components/Category'
@@ -93,21 +93,7 @@ export class BodyHome extends React.Component<Props> {
             </Grid>
           </Grid>
         </BodyHomeSection>
-        <BodyHomeSettings>
-          <NextBGContainer>
-            <Button
-              typeButton="big"
-              backgroundColor="transparent"
-              borderColor="transparent"
-              onClick={() => {
-                this.props.loadNextBackGround()
-              }}
-            >
-              <Text typeText="span" color="white" size="h4" center="center">
-                Next BG >>
-              </Text>
-            </Button>
-          </NextBGContainer>
+        <BodyHomeSessions>
           <Category isMain color="white" name="WorkSpace" />
           <Category color="white" name="Sesión de 1" />
           <Category color="white" name="Sesión 2" />
@@ -116,7 +102,21 @@ export class BodyHome extends React.Component<Props> {
           <Category color="white" name="Sesión 5" />
           <Category color="white" name="Sesión 6" />
           <Category color="white" name="Sesión 7" />
-        </BodyHomeSettings>
+        </BodyHomeSessions>
+        <NextBGContainer>
+          <Button
+            typeButton="big"
+            backgroundColor="transparent"
+            borderColor="transparent"
+            onClick={() => {
+              this.props.loadNextBackGround()
+            }}
+          >
+            <Text typeText="span" color="white" size="h4" center="center">
+              Next BG >>
+            </Text>
+          </Button>
+        </NextBGContainer>
       </BodyHomeContainer>
     )
   }

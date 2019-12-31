@@ -18,8 +18,8 @@ export const SearchHomeContainer = styled.div`
   flex-direction: row;
   border-bottom: solid 1px ${p => p.theme.colors.white};
   @media only screen and (max-width: 769px) {
-    width: 70%;
-    margin-top: ${p => p.theme.sizes.small};
+    width: 80%;
+    margin-top: ${p => p.theme.sizes.large};
   }
 `
 
