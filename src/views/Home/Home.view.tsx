@@ -9,26 +9,37 @@ interface State {
 export class Home extends React.Component<State> {
   state = {
     counterBackgroundId: 3,
+    showCategories: false,
+    showSessions: false,
   }
 
-  private loadNextBackGround = () => {
+  private handleCategories = () =>
     this.setState({
-      counterBackgroundId:
-        this.state.counterBackgroundId !== 9
-          ? this.state.counterBackgroundId++
-          : 1,
+      showCategories: !this.state.showCategories,
+      showSessions: false,
     })
-  }
+
+  private handleSessions = () =>
+    this.setState({
+      showCategories: false,
+      showSessions: !this.state.showSessions,
+    })
 
   render() {
-    const imgUrl = require(`../../imgs/landscape_pic/${this.state
-      .counterBackgroundId++}.jpg`)
-
+    const { showCategories, showSessions } = this.state
     return (
       <>
-        <Canvas backgroundId={imgUrl}>
-          <HeaderHome loadNextBackGround={this.loadNextBackGround} />
-          <BodyHome />
+        <Canvas>
+          <HeaderHome
+            handleCategories={this.handleCategories}
+            handleSessions={this.handleSessions}
+          />
+          <BodyHome
+            showCategories={showCategories}
+            showSessions={showSessions}
+            handleCategories={this.handleCategories}
+            handleSessions={this.handleSessions}
+          />
         </Canvas>
       </>
     )

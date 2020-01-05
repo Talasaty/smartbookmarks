@@ -53,5 +53,8 @@ export const ButtonsOnlyMobile = styled.div`
   display: none;
   @media only screen and (max-width: 769px) {
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 `

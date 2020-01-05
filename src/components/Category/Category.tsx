@@ -29,8 +29,11 @@ const CategoryContainer = styled.div.attrs({})<PropsStyled>`
   @media only screen and (max-width: 769px) {
     margin-left: 0px;
     margin-right: 0px;
-    max-width: 100%;
+    width: 100%;
     border-bottom: 1px solid ${p => p.theme.colors.darkGray};
+    justify-content: center;
+    padding-left: 0px;
+    border: none;
   }
 `
 
@@ -57,6 +60,7 @@ interface Props {
   color?: ColorsOptions
   isMain?: boolean
   iconPosition?: 'right'
+  onClick?: any
 }
 
 export const Category: React.FC<Props> = ({
@@ -64,6 +68,7 @@ export const Category: React.FC<Props> = ({
   color,
   name,
   iconPosition,
+  onClick,
 }) => {
   const [isOver, setIsOver] = useState(false)
 
@@ -78,7 +83,7 @@ export const Category: React.FC<Props> = ({
         {iconPosition === 'right' && (
           <>
             <EditButton isOver={isOver} />
-            <TextContainer>
+            <TextContainer onClick={onClick}>
               <Text typeText="span" color={color} size="h3" center="left">
                 {name.substr(0, 11)}
               </Text>
@@ -89,7 +94,7 @@ export const Category: React.FC<Props> = ({
         {!iconPosition && (
           <>
             <OpenCategory src={launch} onClick={() => console.log('pulsado')} />
-            <TextContainer>
+            <TextContainer onClick={onClick}>
               <Text typeText="span" color={color} size="h3">
                 {name.substr(0, 11)}
               </Text>

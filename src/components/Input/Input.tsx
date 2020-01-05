@@ -54,7 +54,10 @@ const InputStyled = styled.input.attrs({})<Props>`
   outline: none;
 
   ::placeholder {
-    color: ${p => p.theme.colors.ligthGray};
+    color: ${p =>
+      p.placeHolderColor
+        ? colors[p.placeHolderColor]
+        : p.theme.colors.ligthGray};
   }
 `
 
@@ -99,6 +102,7 @@ interface Props {
   paddingLeft?: SizesOptions
   paddingRight?: SizesOptions
   fontSize?: FontSizeOptions
+  placeHolderColor?: ColorsOptions
 }
 
 export const Input: React.FC<Props> = ({

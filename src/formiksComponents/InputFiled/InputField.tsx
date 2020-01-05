@@ -18,6 +18,7 @@ interface Props {
   paddingLeft?: SizesOptions
   paddingRight?: SizesOptions
   fontSize?: FontSizeOptions
+  placeHolderColor?: ColorsOptions
 }
 
 export const InputFiled: React.SFC<

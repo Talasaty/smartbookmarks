@@ -16,7 +16,8 @@ import { Button } from '$components/Button'
 import { Text } from '$components/Text'
 
 interface Props {
-  loadNextBackGround: () => void
+  handleCategories: () => void
+  handleSessions: () => void
 }
 
 export class HeaderHome extends React.Component<Props> {
@@ -35,38 +36,38 @@ export class HeaderHome extends React.Component<Props> {
           <Form>
             <HeaderHomeWrapper>
               <SettingsHomeContainer>
-                <Button
-                  typeButton="tiny"
-                  backgroundColor="transparent"
-                  borderColor="transparent"
-                  onClick={() => {
-                    this.props.loadNextBackGround()
-                  }}
-                >
-                  <Text typeText="span" color="white" size="h4" center="center">
-                    Next BG >>
-                  </Text>
-                </Button>
                 <ButtonsOnlyMobile>
                   <Button
                     typeButton="tiny"
                     backgroundColor="transparent"
                     borderColor="transparent"
                     onClick={() => {
-                      this.props.loadNextBackGround()
+                      this.props.handleCategories()
                     }}
                   >
-                    Categorias
+                    <Text
+                      typeText="span"
+                      color="white"
+                      size="h4"
+                      center="center"
+                    >
+                      Categorias
+                    </Text>
                   </Button>
                   <Button
                     typeButton="tiny"
                     backgroundColor="transparent"
                     borderColor="transparent"
-                    onClick={() => {
-                      this.props.loadNextBackGround()
-                    }}
+                    onClick={() => this.props.handleSessions()}
                   >
-                    Sesiones
+                    <Text
+                      typeText="span"
+                      color="white"
+                      size="h4"
+                      center="center"
+                    >
+                      Sesiones
+                    </Text>
                   </Button>
                 </ButtonsOnlyMobile>
                 <Button
@@ -74,7 +75,7 @@ export class HeaderHome extends React.Component<Props> {
                   backgroundColor="transparent"
                   borderColor="transparent"
                   onClick={() => {
-                    this.props.loadNextBackGround()
+                    console.log('click on settings')
                   }}
                 >
                   <IconSettingsHome src={Settings} />
@@ -90,6 +91,7 @@ export class HeaderHome extends React.Component<Props> {
                   type="text"
                   placeholder="Busca algo"
                   color="white"
+                  placeHolderColor="darkGray"
                 />
                 <ButtonSearchHome type="submit">
                   <IconSearchHome src={Search} />

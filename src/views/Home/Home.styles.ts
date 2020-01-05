@@ -1,13 +1,16 @@
 import { styled } from '$utils/theme/themeStyledComponents'
+import picture from '$imgs/bookMarkLogin.jpg'
+import pictureResponsive from '$imgs/loginMobile.jpg'
 
-interface Props {
-  backgroundId?: string
-}
-
-export const Canvas = styled.div<Props>`
+export const Canvas = styled.div`
   width: 100%;
   height: 100vh;
 
-  background: ${p => `url(${p.backgroundId})`} no-repeat center center fixed;
   background-size: cover;
+
+  background: ${`url(${picture})`};
+
+  @media only screen and (max-width: 769px) {
+    background: ${`url(${pictureResponsive})`};
+  }
 `
