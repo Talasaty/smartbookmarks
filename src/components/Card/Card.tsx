@@ -42,10 +42,13 @@ const Description = styled.div<PropsStyled>`
   border-radius: 5px;
 
   @media only screen and (max-width: 769px) {
-    height: 100vh;
-    width: 100vw;
-    top: 0;
+    width: 95%;
+    height: 95%;
     left: 0;
+    top: 2.5%;
+    botton: 2.5%;
+    right: 0;
+    margin: auto;
   }
 `
 
@@ -105,7 +108,9 @@ export const Card: React.FC<Props> = ({ img }) => {
               backgroundColor="transparent"
               onClick={() => setIsInside(false)}
             >
-              X
+              <Text typeText="span" size="h3">
+                X
+              </Text>
             </Button>
           </CloseButtonWrapper>
         </HeaderDescriptionWrapper>
