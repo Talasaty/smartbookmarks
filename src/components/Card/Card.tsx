@@ -46,7 +46,6 @@ const Description = styled.div<PropsStyled>`
     height: 95%;
     left: 0;
     top: 2.5%;
-    botton: 2.5%;
     right: 0;
     margin: auto;
   }
